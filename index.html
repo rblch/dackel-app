@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dackel is a native Markdown editor for macOS.">
+  <meta name="theme-color" content="#f8f6ed">
+  <title>Dackel — Markdown for Mac</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="mascot.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <div>
+        <h1>Dackel</h1>
+        <p>A native Markdown editor for macOS.</p>
+      </div>
+      <button class="mascot-button" type="button" aria-label="Take Dackel for a walk" title="Take Dackel for a walk" disabled>
+        <svg class="mascot-frame" viewBox="0 0 424 239" aria-hidden="true">
+          <image href="assets/dackel-walk.png" x="-24" y="-140" width="1774" height="887"/>
+        </svg>
+        <span class="mascot-bone" hidden aria-hidden="true">
+          <svg viewBox="0 0 18 12" width="18" height="12" shape-rendering="crispEdges"><path d="M1 1h4v2h8V1h4v4h-2v2h2v4h-4V9H5v2H1V7h2V5H1Z" fill="#eadbb8" stroke="#69563b"/></svg>
+        </span>
+      </button>
+      <canvas class="mascot-walkway" hidden aria-hidden="true"></canvas>
+      <span class="sr-only mascot-status" role="status"></span>
+    </header>
+
+    <figure class="app-screenshot">
+      <img src="assets/dackel-app.png" alt="Dackel running on macOS, with a folder of Markdown notes in the sidebar and the note A weekend away open in Rendered mode." width="2584" height="1744" fetchpriority="high">
+    </figure>
+
+    <footer>
+      <p class="release-status">In development</p>
+      <nav aria-label="Support and legal information">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+    </footer>
+  </main>
+</body>
+</html>
