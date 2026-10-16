@@ -1,0 +1,20 @@
+# Keep AI-use agents separate from search crawlers.
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /impressum
+Disallow: /support
+Disallow: /privacy
+
+# Search crawlers must be able to read the noindex meta tag on these pages.
+# Blocking their access would allow URL-only entries to remain in search results.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+Allow: /
+
+# Other crawlers, including AI training and AI search crawlers.
+# Prefixes cover the .html URLs, extensionless URLs, and query strings.
+User-agent: *
+Disallow: /impressum
+Disallow: /support
+Disallow: /privacy

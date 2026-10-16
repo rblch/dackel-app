@@ -30,3 +30,16 @@ JavaScript. There are no analytics or external font dependencies.
 ## Privacy notice
 
 The privacy notice covers this website, not data handling inside the Dackel app.
+
+## Indexing preferences
+
+Impressum, Support, and Privacy include `noindex`, `nofollow`, `noarchive`,
+`nosnippet`, and `noimageindex` meta directives. Googlebot, Bingbot, and Applebot
+can fetch these pages to read the directives. Other crawlers, including AI
+crawlers, are asked not to fetch these paths by the root `robots.txt` file.
+Google-Extended and Applebot-Extended also have explicit exclusions.
+The homepage remains indexable and the footer links remain available to visitors.
+
+These are voluntary crawler directives, not access control. They cannot force
+removal of existing copies or prevent crawlers that ignore them from collecting
+public content. Existing search results may take time to disappear after a recrawl.
