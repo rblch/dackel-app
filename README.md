@@ -26,8 +26,6 @@ Click the Dackel, or use Enter/Space, for a short walk; Escape cancels it. Reduc
 Motion uses a static bone instead. Core content remains available without
 JavaScript. There are no analytics or external font dependencies.
 
-## Privacy draft
+## Privacy notice
 
-The website privacy notice still marks support-email retention as pending,
-matching the approved source notice. The notice covers this website, not data
-handling inside the Dackel app.
+The privacy notice covers this website, not data handling inside the Dackel app.
