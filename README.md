@@ -2,8 +2,8 @@
 
 The static website for Dackel, a native Markdown editor for macOS.
 
-- Website: https://rblch.github.io/dackel-app/
-- Support: https://rblch.github.io/dackel-app/support.html
+- Website: https://dackelapp.com/
+- Support: https://dackelapp.com/support.html
 
 ## Local preview
 
@@ -16,7 +16,8 @@ Open <http://localhost:8080/>. No build or dependency installation is needed.
 ## Publishing
 
 GitHub Pages publishes the root of `main`. Push updates to `main` to deploy.
-Relative URLs support the `/dackel-app/` project path.
+The `CNAME` file preserves the `dackelapp.com` custom domain on deployment.
+Relative URLs also support the original `/dackel-app/` project path.
 
 ## Assets and interaction
 
