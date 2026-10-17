@@ -29,7 +29,8 @@ JavaScript. There are no analytics or external font dependencies.
 
 ## Privacy notice
 
-The privacy notice covers this website, not data handling inside the Dackel app.
+The privacy notice covers the Dackel macOS app and this website, including local
+storage, external content, hosting, support correspondence, and deletion.
 
 ## Indexing preferences
 
