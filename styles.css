@@ -26,7 +26,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #8c4225; outline-offs
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 18px;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
   margin: 0 0 12px;
 }
 
-.intro p { font-size: 17px; line-height: 1.6; margin: 0; color: #55574e; }
+.intro-caption { max-width: 660px; margin: 0 0 34px; color: #55574e; font-size: 17px; line-height: 1.6; }
 .app-screenshot { margin: 0 0 30px; }
 .app-screenshot img { display: block; width: 100%; height: auto; border-radius: 12px; }
 
@@ -51,9 +51,9 @@ footer .release-status { font-size: 12px; white-space: nowrap; }
 
 @media (max-width: 600px) {
   .page { width: calc(100% - 36px); margin-top: 36px; }
-  .intro { gap: 12px; margin-bottom: 26px; align-items: flex-start; }
+  .intro { gap: 12px; margin-bottom: 14px; align-items: flex-start; }
   h1 { font-size: 38px; letter-spacing: -1px; margin-bottom: 10px; }
-  .intro p { font-size: 15px; max-width: 210px; }
+  .intro-caption { font-size: 15px; margin-bottom: 26px; }
   .app-screenshot { margin-bottom: 24px; }
   .app-screenshot img { border-radius: 6px; }
   footer { flex-wrap: wrap; gap: 12px 24px; padding-top: 18px; }
