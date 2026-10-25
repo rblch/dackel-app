@@ -1,0 +1,67 @@
+:root {
+  color-scheme: light;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: #30312c;
+  background: #f8f6ed;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: 4px; }
+a:hover { color: #8c4225; }
+a:focus-visible, button:focus-visible { outline: 2px solid #8c4225; outline-offset: 5px; }
+::selection { background: #ecd8a6; }
+.page { width: min(100% - 96px, 1000px); margin: 0 auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 38px; }
+.wordmark { font-size: 25px; font-weight: 650; letter-spacing: -1px; text-decoration: none; }
+.release { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #68695e; }
+.release::before { content: ""; width: 6px; height: 6px; flex: none; background: #9c7751; border-radius: 50%; }
+.intro { position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-top: 76px; margin-bottom: 37px; }
+h1 { margin: 0; font-size: clamp(44px, 6.3vw, 76px); line-height: 1.06; letter-spacing: -3.9px; font-weight: 600; }
+h1 span { display: block; color: #777969; }
+.intro-caption { max-width: 470px; margin: 25px 0 0; font-size: 18px; line-height: 1.65; color: #5c5e52; }
+.app-screenshot { margin: 0; }
+.app-screenshot img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 39px 0 43px; border-bottom: 1px solid #deddd2; }
+.details h2 { margin: 0 0 9px; font-size: 15px; line-height: 1.5; font-weight: 600; letter-spacing: -.15px; }
+.details p { margin: 0; font-size: 14px; line-height: 1.8; color: #68695e; }
+.details code { font-size: 12px; }
+.maker { display: flex; justify-content: space-between; align-items: flex-end; gap: 38px; padding: 38px 0 42px; }
+.maker p { max-width: 440px; margin: 0; font-size: 14px; line-height: 1.8; color: #68695e; }
+footer { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-top: 1px solid #deddd2; padding: 22px 0 30px; font-size: 11px; color: #77796d; }
+footer p { margin: 0; }
+.origin svg { width: 12px; height: 18px; margin-right: 6px; vertical-align: baseline; }
+footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
+footer a { text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+[hidden] { display: none !important; }
+.mascot-button { position: relative; display: block; flex: none; width: 180px; aspect-ratio: 1499 / 1049; border: 0; padding: 0; margin: 0 8px 4px 0; background: transparent; color: inherit; border-radius: 6px; }
+.mascot-button:enabled { cursor: pointer; }
+.mascot-frame { position: absolute; right: .8%; bottom: 18%; width: 96%; height: auto; overflow: hidden; image-rendering: pixelated; }
+.mascot-bone { position: absolute; top: 7px; right: 7px; line-height: 0; }
+.mascot-walkway { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; image-rendering: pixelated; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 700px) {
+  .page { width: calc(100% - 40px); }
+  .site-header { padding-top: 26px; }
+  .intro { padding-top: 54px; margin-bottom: 28px; gap: 12px; }
+  h1 { font-size: 48px; letter-spacing: -2.4px; }
+  .intro-caption { font-size: 16px; margin-top: 21px; }
+  .mascot-button { width: 104px; margin-right: 0; }
+  .details { gap: 22px; padding: 29px 0 32px; }
+  .details h2 { font-size: 14px; }
+  .details p { font-size: 13px; }
+  .maker { padding: 29px 0 32px; }
+}
+@media (max-width: 520px) {
+  .intro { display: block; }
+  h1 { font-size: clamp(38px, 10.2vw, 52px); letter-spacing: -2px; }
+  .mascot-button { width: 86px; margin: 12px 0 0 auto; }
+  .app-screenshot img { border-radius: 6px; }
+  .details { grid-template-columns: 1fr; gap: 23px; }
+  .details h2 { margin-bottom: 4px; }
+  .details p { max-width: 390px; font-size: 14px; }
+  .maker { display: block; }
+  footer { flex-wrap: wrap; gap: 15px; }
+  footer nav { gap: 19px; }
+}

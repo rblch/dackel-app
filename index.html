@@ -3,21 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dackel is a native Markdown editor for macOS.">
+  <meta name="description" content="A native Markdown editor for your everyday writing. Plain Markdown files, linked notes, and Quick Capture. Currently in development.">
   <meta name="theme-color" content="#f8f6ed">
   <title>Dackel — Markdown for Mac</title>
   <link rel="icon" href="favicon.ico?v=8d63aca" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="assets/dackel-favicon-32-820987a9.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/dackel-favicon-64-45338dbb.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/dackel-apple-touch-icon-c06fd930.png" sizes="180x180">
-  <link rel="stylesheet" href="styles.css?v=7fabd08">
+  <link rel="stylesheet" href="homepage.css?v=e0e538f8">
   <script src="mascot.js" defer></script>
 </head>
 <body>
   <main class="page">
-    <header class="intro">
+    <header class="site-header">
+      <a class="wordmark" href="./">Dackel</a>
+      <span class="release">In development</span>
+    </header>
+
+    <section class="intro" aria-labelledby="headline">
       <div>
-        <h1>Dackel</h1>
+        <h1 id="headline">Markdown.<span>Made for Mac.</span></h1>
+        <p class="intro-caption">A native Markdown editor for your everyday writing.</p>
       </div>
       <button class="mascot-button" type="button" aria-label="Take Dackel for a walk" title="Take Dackel for a walk" disabled>
         <svg class="mascot-frame" viewBox="0 0 424 239" aria-hidden="true">
@@ -29,16 +35,35 @@
       </button>
       <canvas class="mascot-walkway" hidden aria-hidden="true"></canvas>
       <span class="sr-only mascot-status" role="status"></span>
-    </header>
-
-    <p class="intro-caption">For people who love taking notes and love the Mac. Dackel makes your Markdown files feel at home.</p>
+    </section>
 
     <figure class="app-screenshot">
-      <img src="assets/dackel-app.png" alt="Dackel running on macOS, with a folder of Markdown notes in the sidebar and the note A weekend away open in Rendered mode." width="2584" height="1744" fetchpriority="high">
+      <img src="assets/dackel-app.png?v=bc9d6f74" alt="Dackel on macOS: the Weekend Notes vault with a weekend plan, checklist, and links to other notes." width="2784" height="1824" fetchpriority="high">
     </figure>
 
+    <section class="details" aria-label="About the app">
+      <div>
+        <h2>Plain Markdown files</h2>
+        <p>Your notes live in your own folders as <code>.md</code> files. Open them in Dackel, Finder, or another editor.</p>
+      </div>
+      <div>
+        <h2>Linked notes</h2>
+        <p>Connect your notes with links and see which notes link back. Follow an idea from one note to the next.</p>
+      </div>
+      <div>
+        <h2>Quick Capture</h2>
+        <p>Capture a thought from any app with a keyboard shortcut. Save it to your inbox or today’s note.</p>
+      </div>
+    </section>
+
+    <section class="maker" aria-label="About Dackel">
+      <div>
+        <p>Dackel is an independent app, still taking shape.</p>
+      </div>
+    </section>
+
     <footer>
-      <p class="release-status">In development</p>
+      <p class="origin"><svg viewBox="0 0 24 32" fill="currentColor" aria-hidden="true" focusable="false"><!-- Same silhouette as CologneCathedralView in the macOS app. --><polygon points="1,32 1,24 2,24 2,17 3,17 3.5,12 4,13 6,1 8,13 8.5,12 9,17 10,17 10,22 12,18 14,22 14,17 15,17 15.5,12 16,13 18,1 20,13 20.5,12 21,17 22,17 22,24 23,24 23,32"/></svg>Made in Cologne</p>
       <nav aria-label="Support and legal information">
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
