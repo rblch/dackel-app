@@ -1,84 +1,14 @@
-@charset "UTF-8";
-
-:root {
-  color-scheme: light;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
-  color: #30312c;
-  background: #f8f6ed;
-  -webkit-font-smoothing: antialiased;
-}
-
-* { box-sizing: border-box; }
-body { margin: 0; }
-a { color: inherit; text-underline-offset: 3px; }
-a:hover { color: #8c4225; }
-a:focus-visible, button:focus-visible { outline: 2px solid #8c4225; outline-offset: 5px; }
-::selection { background: #ecd8a6; }
-
-.page {
-  width: min(100% - 80px, 1000px);
-  margin: 62px auto 32px;
-}
-
-.intro {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 18px;
-}
-
-h1 {
-  font: inherit;
-  font-size: 48px;
-  font-weight: 600;
-  letter-spacing: -1.6px;
-  line-height: 1.1;
-  margin: 0 0 12px;
-}
-
-.intro-caption { max-width: 660px; margin: 0 0 34px; color: #55574e; font-size: 17px; line-height: 1.6; }
-.app-screenshot { margin: 0 0 30px; }
-.app-screenshot img { display: block; width: 100%; height: auto; border-radius: 12px; }
-
-footer { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; border-top: 1px solid #deddd2; padding-top: 22px; }
-footer nav { display: flex; gap: 24px; font-size: 12px; line-height: 1.8; }
-footer nav a { text-decoration: none; }
-footer nav a:hover, footer nav a[aria-current="page"] { text-decoration: underline; }
-footer p { font-size: 14px; line-height: 1.65; margin: 0; color: #616258; }
-footer .release-status { font-size: 12px; white-space: nowrap; }
-
-@media (max-width: 600px) {
-  .page { width: calc(100% - 36px); margin-top: 36px; }
-  .intro { gap: 12px; margin-bottom: 14px; align-items: flex-start; }
-  h1 { font-size: 38px; letter-spacing: -1px; margin-bottom: 10px; }
-  .intro-caption { font-size: 15px; margin-bottom: 26px; }
-  .app-screenshot { margin-bottom: 24px; }
-  .app-screenshot img { border-radius: 6px; }
-  footer { flex-wrap: wrap; gap: 12px 24px; padding-top: 18px; }
-  footer p { font-size: 13px; }
-  footer .release-status { margin-top: 0; }
-}
-
-.legal-page { max-width: 680px; }
-.back-link { display: inline-block; font-size: 14px; margin-bottom: 36px; }
-.legal-content { margin-bottom: 48px; overflow-wrap: anywhere; }
-.legal-content h1 { font-size: 36px; letter-spacing: -1px; margin-bottom: 22px; }
-.legal-content h2 { font-size: 18px; font-weight: 600; margin: 30px 0 10px; }
-.legal-content p { font-size: 15px; line-height: 1.8; margin: 0 0 18px; }
-.legal-content .draft-note { font-size: 13px; color: #7c5437; border-left: 2px solid #b79775; padding-left: 14px; margin-bottom: 26px; }
-.legal-content address { font-size: 15px; font-style: normal; line-height: 1.8; margin: 26px 0; }
-
-[hidden] { display: none !important; }
-/* Reserve the same header space for every pose. */
-.mascot-button { position: relative; display: block; flex: none; width: 158px; aspect-ratio: 1499 / 1049; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; border-radius: 6px; }
-.mascot-button:enabled { cursor: pointer; }
-.mascot-frame { position: absolute; right: 0.8%; bottom: 18%; width: 96%; height: auto; overflow: hidden; image-rendering: pixelated; }
-.mascot-bone { position: absolute; top: 7px; right: 7px; line-height: 0; }
-.mascot-walkway { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; image-rendering: pixelated; }
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-
-@media (max-width: 600px) {
-  .mascot-button { width: 96px; margin-top: 6px; }
+/* Reading layout for Support, Privacy, and Impressum; the site chrome is shared. */
+.legal-page { display: flex; flex-direction: column; min-height: 100svh; }
+.legal-content { flex: 1; width: 100%; max-width: 680px; padding: 76px 0 64px; overflow-wrap: anywhere; }
+.legal-content h1 { margin: 0 0 28px; font-size: clamp(38px, 5vw, 60px); line-height: 1.1; letter-spacing: -2.5px; }
+.legal-content h2 { margin: 34px 0 10px; font-size: 18px; font-weight: 600; letter-spacing: -.2px; }
+.legal-content p, .legal-content address { margin: 0 0 18px; font-size: 15px; line-height: 1.8; color: #5c5e52; }
+.legal-content address { margin: 26px 0; font-style: normal; }
+.legal-content > :last-child { margin-bottom: 0; }
+.legal-page footer { flex: none; }
+.legal-page footer a[aria-current="page"] { text-decoration: underline; }
+@media (max-width: 700px) {
+  .legal-content { padding: 54px 0 44px; }
+  .legal-content h1 { letter-spacing: -1.8px; }
 }
