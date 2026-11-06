@@ -12,24 +12,41 @@ a:hover { color: #8c4225; }
 a:focus-visible, button:focus-visible { outline: 2px solid #8c4225; outline-offset: 5px; }
 ::selection { background: #ecd8a6; }
 .page { width: min(100% - 96px, 1000px); margin: 0 auto; }
-.site-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 38px; }
-.wordmark { font-size: 25px; font-weight: 650; letter-spacing: -1px; text-decoration: none; }
-.release { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #68695e; }
-.release::before { content: ""; width: 6px; height: 6px; flex: none; background: #9c7751; border-radius: 50%; }
-.intro { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: last baseline; justify-content: space-between; gap: 0 24px; padding-top: 76px; margin-bottom: 37px; }
+.site-header { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 38px; }
+.wordmark { position: relative; z-index: 2; font-size: 25px; font-weight: 650; letter-spacing: -.04em; text-decoration: none; -webkit-text-stroke: .2em #f8f6ed; paint-order: stroke fill; }
+.intro { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); align-items: last baseline; justify-content: space-between; gap: 0 24px; padding-top: 62px; margin-bottom: 37px; }
 .intro > div:first-child { width: max-content; max-width: 100%; }
 h1 { margin: 0; font-size: clamp(44px, 6.3vw, 76px); line-height: 1.06; letter-spacing: -3.9px; font-weight: 600; }
 h1 > span { display: block; color: #777969; }
 .headline-period { margin-left: .05em; }
 .intro-caption { min-width: 0; grid-column: 1 / -1; grid-row: 2; max-width: 470px; margin: 25px 0 0; font-size: 18px; line-height: 1.65; color: #5c5e52; }
-.app-screenshot { margin: 0; }
-.app-screenshot img { display: block; width: 100%; height: auto; border-radius: 12px; }
-.details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 39px 0 43px; border-bottom: 1px solid #deddd2; }
-.details h2 { margin: 0 0 9px; font-size: 15px; line-height: 1.5; font-weight: 600; letter-spacing: -.15px; }
-.details p { margin: 0; font-size: 14px; line-height: 1.8; color: #68695e; }
-.details code { font-size: 12px; }
-.maker { display: flex; justify-content: space-between; align-items: flex-end; gap: 38px; padding: 38px 0 42px; }
-.maker p { max-width: 440px; margin: 0; font-size: 14px; line-height: 1.8; color: #68695e; }
+.get-app { grid-column: 1 / -1; grid-row: 3; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px; margin-top: 32px; }
+.download { display: flex; flex-direction: column; align-items: center; gap: 9px; }
+.download-button { display: inline-flex; align-items: center; justify-content: center; width: 180px; height: 46px; padding: 0 16px; border-radius: 12px; background: #30312c; color: #f8f6ed; font-size: 15px; font-weight: 600; letter-spacing: -.1px; text-decoration: none; box-shadow: 0 1px 2px rgba(48, 49, 44, .18), 0 4px 12px rgba(48, 49, 44, .10); transition: background .15s ease; }
+.download-button:hover { background: #8c4225; color: #f8f6ed; }
+.download-note { margin: 0; font-size: 11.5px; letter-spacing: .1px; color: #8a8b7f; }
+.app-store-soon { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 180px; height: 46px; padding: 0 16px; border: 1px solid #deddd2; border-radius: 12px; background: rgba(255, 255, 255, .45); }
+.app-store-soon p { display: flex; flex-direction: column; align-items: center; gap: 1px; margin: 0; font-size: 14px; line-height: 1.25; }
+.app-store-soon strong { font-weight: 600; color: #30312c; }
+.app-store-soon span { font-size: 9px; letter-spacing: .6px; text-transform: uppercase; color: #9c7751; }
+/* The capture includes the window's shadow; pull it outward so the window itself lines up with the page column. */
+.app-screenshot { margin: 0 -5.5%; }
+.app-screenshot img { display: block; width: 100%; height: auto; }
+.features { display: grid; gap: 48px; padding: 48px 0 40px; border-bottom: 1px solid #deddd2; }
+.feature { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); align-items: center; gap: 56px; margin: 0; }
+.feature:nth-child(even) { grid-template-columns: minmax(0, 8fr) minmax(0, 5fr); }
+.feature:nth-child(even) .feature-text { order: 2; }
+.feature h2 { margin: 0 0 12px; font-size: 26px; line-height: 1.2; font-weight: 600; letter-spacing: -.8px; }
+.feature p { margin: 0; font-size: 15px; line-height: 1.75; color: #5c5e52; }
+.feature kbd { font-family: inherit; font-size: 13px; padding: 1px 6px; border: 1px solid #deddd2; border-radius: 5px; background: #fffdf6; white-space: nowrap; }
+/* The captures carry their own window shadow on a transparent background. */
+.feature img { display: block; width: 100%; height: auto; }
+/* Small windows stay near their real size instead of filling the column. */
+.feature img.narrow { max-width: 440px; justify-self: center; }
+.closing { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px 38px; padding: 38px 0 42px; }
+.closing h2 { margin: 0 0 4px; font-size: 18px; font-weight: 600; letter-spacing: -.3px; }
+.closing p { margin: 0; font-size: 13px; line-height: 1.6; color: #77796d; }
+.closing .download-button-small { width: auto; height: 38px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
 footer { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-top: 1px solid #deddd2; padding: 22px 0 30px; font-size: 11px; color: #77796d; }
 footer p { margin: 0; }
 .origin svg { width: 12px; height: 18px; margin-right: 6px; vertical-align: baseline; }
@@ -37,34 +54,40 @@ footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
 footer a { text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 [hidden] { display: none !important; }
-/* A zero-height grid item gives the artwork a baseline independent of native button layout. */
-.mascot-anchor { position: relative; width: 140px; height: 0; }
+/* Dackel stands behind the wordmark as if peeking over a fence: a zero-height anchor puts his feet
+   on the text baseline, a negative margin slides him behind the letters, and the letters' outline
+   in the page colour cuts them cleanly across his body. */
+/* The dog's size is independent of the word; --dog-peek is how far his head reaches past the last letter. */
+.brand { --wordmark-size: 41px; --dog-scale: 1.05; --dog-peek: 17px; display: flex; align-items: baseline; padding-top: calc(22px * var(--dog-scale)); font-size: var(--wordmark-size); }
+.brand .wordmark { font-size: 1em; }
+.mascot-anchor { position: relative; z-index: 1; width: calc(112px * var(--dog-scale)); height: 0; margin-left: calc(var(--dog-peek) - 112px * var(--dog-scale)); }
 .mascot-button { position: absolute; left: 0; bottom: 0; display: block; width: 100%; aspect-ratio: 424 / 239; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; border-radius: 6px; }
 .mascot-button:enabled { cursor: pointer; }
 .mascot-frame { position: absolute; right: 0; bottom: 0; width: 100%; height: auto; overflow: hidden; image-rendering: pixelated; }
-.mascot-bone { position: absolute; top: 7px; right: 7px; line-height: 0; }
-.mascot-walkway { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; image-rendering: pixelated; }
+.mascot-bone { position: absolute; top: -2px; right: -8px; line-height: 0; }
+.mascot-walkway { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; pointer-events: none; image-rendering: pixelated; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 @media (max-width: 700px) {
   .page { width: calc(100% - 40px); }
   .site-header { padding-top: 26px; }
-  .intro { padding-top: 54px; margin-bottom: 28px; column-gap: 12px; }
+  .intro { padding-top: 44px; margin-bottom: 28px; column-gap: 12px; }
   h1 { font-size: 48px; letter-spacing: -2.4px; }
   .intro-caption { font-size: 16px; margin-top: 21px; }
-  .mascot-anchor { width: 104px; }
-  .details { gap: 22px; padding: 29px 0 32px; }
-  .details h2 { font-size: 14px; }
-  .details p { font-size: 13px; }
-  .maker { padding: 29px 0 32px; }
+  .get-app { margin-top: 26px; }
+  .closing { padding: 29px 0 32px; }
+  .features { gap: 36px; padding: 36px 0 28px; }
+  .feature { grid-template-columns: 1fr; gap: 20px; }
+  .feature:nth-child(even) { grid-template-columns: 1fr; }
+  .feature:nth-child(even) .feature-text { order: 0; }
+  .feature h2 { font-size: 22px; }
 }
 @media (max-width: 520px) {
   h1 { font-size: clamp(34px, 9.3vw, 48px); letter-spacing: -2px; }
-  .mascot-anchor { width: clamp(50px, 15.5vw, 80px); }
-  .app-screenshot img { border-radius: 6px; }
-  .details { grid-template-columns: 1fr; gap: 23px; }
-  .details h2 { margin-bottom: 4px; }
-  .details p { max-width: 390px; font-size: 14px; }
-  .maker { display: block; }
+  .brand { --dog-scale: .9; }
+  .get-app { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .download-button, .app-store-soon { width: 100%; padding: 0 8px; font-size: 14px; }
+  .app-store-soon p { font-size: 13px; }
+  .download-note { font-size: 10.5px; white-space: nowrap; }
   footer { flex-wrap: wrap; gap: 15px; }
   footer nav { gap: 19px; }
 }

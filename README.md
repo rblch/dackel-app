@@ -21,7 +21,7 @@ Relative URLs also support the original `/dackel-app/` project path.
 
 ## Assets and interaction
 
-The app screenshot was supplied by the developer. The header uses the app's
+The app screenshots were supplied by the developer. The header uses the app's
 existing pixel-art walk atlas for both its resting pose and optional animation.
 Click the Dackel, or use Enter/Space, for a short walk; Escape cancels it. Reduce
 Motion uses a static bone instead. Core content remains available without

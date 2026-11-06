@@ -81,9 +81,9 @@
     const home = Math.max(0, Math.min(bounds.width - dogWidth,
       stillBounds.left - bounds.left));
     const baseline = stillBounds.bottom - bounds.top;
-    const textBounds = document.querySelector('.intro > div').getBoundingClientRect();
-    const leftLimit = Math.min(home, Math.max(0, textBounds.right - bounds.left + 12));
-    const distance = home - leftLimit;
+    // From beside the wordmark, Dackel trots to the far end of the header and back.
+    const farLimit = Math.max(home, bounds.width - dogWidth);
+    const distance = farLimit - home;
     const travelTime = Math.min(2400, Math.max(1000, distance * 5));
     const pause = 450;
     const duration = travelTime * 2 + pause;
@@ -106,15 +106,17 @@
       }
       const outbound = elapsed < travelTime;
       const waiting = elapsed >= travelTime && elapsed < travelTime + pause;
-      const x = outbound ? home - distance * (elapsed / travelTime)
-        : waiting ? leftLimit
-          : leftLimit + distance * ((elapsed - travelTime - pause) / travelTime);
+      const x = outbound ? home + distance * (elapsed / travelTime)
+        : waiting ? farLimit
+          : farLimit - distance * ((elapsed - travelTime - pause) / travelTime);
       const pose = waiting ? 0 : Math.floor(elapsed / 110) % regions.length;
       const [sx, sy, sw, sh] = regions[pose];
       context.clearRect(0, 0, bounds.width, bounds.height);
       context.save();
-      context.translate(x + (outbound ? dogWidth : 0), 0);
-      context.scale(outbound ? -1 : 1, 1);
+      // The artwork faces right, so only the way home is mirrored.
+      const homeward = !outbound && !waiting;
+      context.translate(x + (homeward ? dogWidth : 0), 0);
+      context.scale(homeward ? -1 : 1, 1);
       context.drawImage(sheet, sx, sy, sw, sh, 0,
         baseline - sh * scale, sw * scale, sh * scale);
       context.restore();
