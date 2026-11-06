@@ -72,21 +72,22 @@
     }
     if (thisWalk !== generation || document.hidden) return;
 
+    // The walkway spans the whole window width so Dackel can leave on the right
+    // and come back from the left; it stops at the window edge, so it never adds a scrollbar.
     canvas.hidden = false;
+    const header = canvas.offsetParent.getBoundingClientRect();
+    canvas.style.left = `${-header.left}px`;
+    canvas.style.width = `${document.documentElement.clientWidth}px`;
     const bounds = canvas.getBoundingClientRect();
     const stillBounds = still.getBoundingClientRect();
     // Rest and walking poses share one atlas frame, scale, and baseline.
     const scale = stillBounds.width / frameWidth;
     const dogWidth = frameWidth * scale;
-    const home = Math.max(0, Math.min(bounds.width - dogWidth,
-      stillBounds.left - bounds.left));
+    const home = stillBounds.left - bounds.left;
     const baseline = stillBounds.bottom - bounds.top;
-    // From beside the wordmark, Dackel trots to the far end of the header and back.
-    const farLimit = Math.max(home, bounds.width - dogWidth);
-    const distance = farLimit - home;
-    const travelTime = Math.min(2400, Math.max(1000, distance * 5));
-    const pause = 450;
-    const duration = travelTime * 2 + pause;
+    // One lap: off the right edge, back in from the left, and home behind the wordmark.
+    const lap = bounds.width + dogWidth;
+    const duration = Math.min(6500, Math.max(2600, lap * 3.4));
     const pixelRatio = window.devicePixelRatio || 1;
     canvas.width = Math.round(bounds.width * pixelRatio);
     canvas.height = Math.round(bounds.height * pixelRatio);
@@ -104,22 +105,15 @@
         rest('Dackel is back.');
         return;
       }
-      const outbound = elapsed < travelTime;
-      const waiting = elapsed >= travelTime && elapsed < travelTime + pause;
-      const x = outbound ? home + distance * (elapsed / travelTime)
-        : waiting ? farLimit
-          : farLimit - distance * ((elapsed - travelTime - pause) / travelTime);
-      const pose = waiting ? 0 : Math.floor(elapsed / 110) % regions.length;
+      // Distance walked so far, wrapped so that leaving on the right re-enters on the left.
+      const travelled = lap * (elapsed / duration);
+      let x = home + travelled;
+      if (x > bounds.width) x -= lap;
+      const pose = Math.floor(elapsed / 110) % regions.length;
       const [sx, sy, sw, sh] = regions[pose];
       context.clearRect(0, 0, bounds.width, bounds.height);
-      context.save();
-      // The artwork faces right, so only the way home is mirrored.
-      const homeward = !outbound && !waiting;
-      context.translate(x + (homeward ? dogWidth : 0), 0);
-      context.scale(homeward ? -1 : 1, 1);
-      context.drawImage(sheet, sx, sy, sw, sh, 0,
+      context.drawImage(sheet, sx, sy, sw, sh, x,
         baseline - sh * scale, sw * scale, sh * scale);
-      context.restore();
       frameRequest = requestAnimationFrame(tick);
     }
     frameRequest = requestAnimationFrame(tick);
