@@ -3,6 +3,14 @@
     <channel>
         <title>Dackel</title>
         <item>
+            <title>1.2</title>
+            <pubDate>Sat, 07 Nov 2026 21:15:21 +0100</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/rblch/dackel-releases/releases/download/v1.2-6/Dackel.dmg" length="32848642" type="application/octet-stream" sparkle:edSignature="BpuDp2auln++nLInp5lCpr0ty4KZs0kVKjShn2jPydvpMQmG1wxAC0WqqhDpjyRxdVy6C/Y+SzH1itOANqgbAg=="/>
+        </item>
+        <item>
             <title>1.1</title>
             <pubDate>Fri, 06 Nov 2026 14:14:54 +0100</pubDate>
             <sparkle:version>5</sparkle:version>
