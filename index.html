@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A native Markdown editor for your everyday writing. Plain Markdown files, linked notes, and Quick Capture. Free, with no accounts or tracking. Download for macOS 13 or later.">
+  <meta name="description" content="A native Markdown editor for journaling, meeting notes, research and linked notes. Plain Markdown files, daily notes, math and Quick Capture. Free, with no accounts or tracking. Download for macOS 13 or later.">
   <meta name="theme-color" content="#f8f6ed">
   <title>Dackel — Markdown for Mac</title>
   <link rel="icon" href="favicon.ico?v=8d63aca" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="assets/dackel-favicon-32-820987a9.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/dackel-favicon-64-45338dbb.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/dackel-apple-touch-icon-c06fd930.png" sizes="180x180">
-  <link rel="stylesheet" href="homepage.css?v=586408a2">
+  <link rel="stylesheet" href="homepage.css?v=10760e0d">
   <script src="mascot.js?v=3f0482c3" defer></script>
 </head>
 <body>
@@ -41,7 +41,7 @@
       <div class="get-app">
         <div class="download">
           <a class="download-button" href="https://github.com/rblch/dackel-releases/releases/latest/download/Dackel.dmg" download>Download for Mac</a>
-          <p class="download-note">Free · Version 1.1 · macOS 13 or later</p>
+          <p class="download-note">Free · Version 1.2.1 · macOS 13 or later</p>
         </div>
         <div class="app-store-soon" role="note">
           <p><strong>Mac App Store</strong><span>Coming soon</span></p>
@@ -52,6 +52,123 @@
     <figure class="app-screenshot">
       <img src="assets/dackel-main-5a6f9f51.png" alt="Dackel on macOS: a rendered note called Plan a weekend walk, with a checklist, links to other notes and a list of things to notice." width="2000" height="1594" fetchpriority="high">
     </figure>
+
+    <nav class="uses-nav" aria-label="Ways to use Dackel">
+      <p>Dackel for</p>
+      <ul>
+        <li><a href="#journal">Journaling</a></li>
+        <li><a href="#meetings">Meetings</a></li>
+        <li><a href="#research">Research &amp; math</a></li>
+        <li><a href="#linked-notes">Linked notes</a></li>
+      </ul>
+    </nav>
+
+    <section class="chapter" id="journal" aria-labelledby="journal-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Journaling</p>
+        <h2 id="journal-title">A page for every day.</h2>
+        <p class="chapter-lede">One note per day, started from your own template, kept as plain files on your Mac. Nobody else reads your journal, including us.</p>
+      </header>
+      <figure class="chapter-visual">
+        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
+          <p><strong>Screenshot to stage</strong>Today's note, 8 November, opened from a Daily template: a mood property, “Three good things”, and a few timed entries added through the day.</p>
+        </div>
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Today's note, one click away</h3>
+          <p>Open Today's Note and Dackel makes the page for you, named by the date and filled from your daily template, with <code>{{date}}</code> and your prompts already in place.</p>
+        </article>
+        <article class="point">
+          <h3>Write it down the moment it happens</h3>
+          <p>Press <kbd>⌃⌥⌘N</kbd> in any app and your thought lands in today's note, with the time if you like, without leaving what you're doing.</p>
+          <img src="assets/dackel-quick-capture-59c11511.png" alt="The Quick Capture window, ready for a thought." width="1200" height="807" loading="lazy">
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="meetings" aria-labelledby="meetings-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Meetings</p>
+        <h2 id="meetings-title">Walk out with the action items.</h2>
+        <p class="chapter-lede">Start every meeting on the same page and leave with a list of everything you promised to do.</p>
+      </header>
+      <figure class="chapter-visual">
+        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
+          <p><strong>Screenshot to stage</strong>The Tasks view: open action items from three weekly meeting notes, grouped by note and heading, one just checked off.</p>
+        </div>
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Every meeting starts the same way</h3>
+          <p>Name new notes automatically, like <code>Meeting 2026-11-08 1000</code>, and start them from a template with attendees, agenda and next steps.</p>
+        </article>
+        <article class="point">
+          <h3>Every open task, in one list</h3>
+          <p>Press <kbd>⌃⌘T</kbd> to see the unchecked tasks from all your notes, grouped by meeting. Check one off there, or jump straight to where it was written.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="research" aria-labelledby="research-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Research, science &amp; math</p>
+        <h2 id="research-title">Equations that look like equations.</h2>
+        <p class="chapter-lede">Write <code>$E = mc^2$</code> and see it typeset. Draw a diagram from a few lines of text. It all stays plain Markdown you can open anywhere.</p>
+      </header>
+      <figure class="chapter-visual">
+        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
+          <p><strong>Screenshot to stage</strong>A lab-notes or thesis chapter in Rendered mode: a displayed equation, inline math in a paragraph, a Mermaid flowchart of the method and a footnote.</p>
+        </div>
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Ready to hand in</h3>
+          <p>Export a PDF with selectable text, typeset math and diagrams, working footnote links and bookmarks for every heading.</p>
+        </article>
+        <article class="point">
+          <h3>Name the drafts that matter</h3>
+          <p>Mark a version “Sent to advisor” and it's kept for good. Later, see exactly what changed since then, and undo any single change.</p>
+          <img src="assets/dackel-version-history-7a44fdb6.png" alt="Version history comparing an earlier version with the current text, with named versions in the timeline." width="1200" height="948" loading="lazy">
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="linked-notes" aria-labelledby="linked-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Linked notes</p>
+        <h2 id="linked-title">Notes that know each other.</h2>
+        <p class="chapter-lede">Link one idea to the next with <code>[[wikilinks]]</code>, then see where everything leads. Open the folder of notes you already have and start right away.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-graph-1f44297a.png" alt="A graph of the Field Notes folder with Weekend walk in the middle, linked to six other notes." width="1200" height="991" loading="lazy">
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>See what links here</h3>
+          <p>The Links panel shows every note that mentions this one, with the sentence around each mention.</p>
+        </article>
+        <article class="point">
+          <h3>Rename without breaking anything</h3>
+          <p>Rename or move a note and every link to it is updated, in every note in the folder.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="underneath" aria-labelledby="underneath-title">
+      <h2 id="underneath-title">And everything underneath.</h2>
+      <ul>
+        <li><h3>Command palette</h3><p>Find any command by typing, with its shortcut beside it.</p></li>
+        <li><h3>Type / to format</h3><p>Headings, lists, checklists and templates without the mouse.</p></li>
+        <li><h3>Tables you can click into</h3><p>Edit cells and add rows in place. Still plain Markdown.</p></li>
+        <li><h3>Two notes side by side</h3><p>Open a second note in a split pane to read one and write the other.</p></li>
+        <li><h3>Search that understands notes</h3><p>Filter by folder, tag or property, like <code>status=active</code>.</p></li>
+        <li><h3>Focus mode</h3><p>Hide the sidebar and panels, and keep only the page.</p></li>
+        <li><h3>Everything at a glance</h3><p>Word count, reading time, properties and tags beside your writing.</p></li>
+        <li><h3>Rendered, Hybrid or Source</h3><p>See formatted text, the Markdown, or both.</p></li>
+        <li><h3>Nothing lost</h3><p>Autosave, recovery after a crash, and Recently Deleted for notes you want back.</p></li>
+      </ul>
+    </section>
 
     <section class="promises" aria-label="Free and private">
       <div>
@@ -66,69 +183,10 @@
       </div>
     </section>
 
-    <section class="features" aria-label="Features">
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Quick Capture from any app</h2>
-          <p>Press <kbd>⌃⌥⌘N</kbd> wherever you are and jot a thought into a new note or today's daily note, without leaving what you're doing.</p>
-        </div>
-        <img src="assets/dackel-quick-capture-59c11511.png" alt="The Quick Capture window, ready for a thought, saving to a new note in Field Notes." width="1200" height="807" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Type / for quick formatting</h2>
-          <p>Type <kbd>/</kbd> at the start of a line to add a heading, a list or a checklist without reaching for the mouse.</p>
-        </div>
-        <img src="assets/dackel-quick-actions-70ed346d.png" class="narrow" alt="A new note called Thoughts with the slash menu open, offering headings, bullet, numbered and task lists." width="1000" height="1000" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>The easiest way to edit tables</h2>
-          <p>Click into a cell and type. Add rows and columns with a click, and the table stays plain Markdown underneath.</p>
-        </div>
-        <img src="assets/dackel-tables-a0b909d5.png" class="card" alt="A Trail times note with a table of four stops, distances, times and notes, with a cell being edited and buttons to add a row or column." width="1260" height="718" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>See what links here</h2>
-          <p>See which notes link to the one you're reading, and where it links to.</p>
-        </div>
-        <img src="assets/dackel-links-67b0b61f.png" alt="The Packing list note with the Links panel showing two linked references and one outgoing link." width="1200" height="940" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>See how your notes connect</h2>
-          <p>A graph of your folder shows how your notes link to each other. Pick a note to open it.</p>
-        </div>
-        <img src="assets/dackel-graph-1f44297a.png" alt="A graph of the Field Notes folder with Weekend walk in the middle, linked to six other notes." width="1200" height="991" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Every version, kept</h2>
-          <p>Dackel saves earlier versions of your notes as you write. Go back to any of them, or undo a single change.</p>
-        </div>
-        <img src="assets/dackel-version-history-7a44fdb6.png" alt="Version history for Weekend walk, comparing a version from 20:53 with the current text, with named versions like First plan in the timeline." width="1200" height="948" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Everything about a note, at a glance</h2>
-          <p>Word count and reading time, properties and tags, and the note's version history, all in one panel beside your writing.</p>
-        </div>
-        <img src="assets/dackel-note-info-cc423863.png" alt="The Packing list note with the Info panel showing statistics, properties, tags and history." width="1200" height="877" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Every command, a keystroke away</h2>
-          <p>Open the command palette and type to find any command, from New Note to Insert Table, with its shortcut beside it.</p>
-        </div>
-        <img src="assets/dackel-command-palette-985679cf.png" alt="The command palette open over a note, listing recent commands such as Quick Capture, Settings and Insert Table." width="1200" height="877" loading="lazy">
-      </article>
-    </section>
-
     <section class="closing" aria-label="Download Dackel">
       <div>
         <h2>Dackel for Mac</h2>
-        <p>Free · Version 1.1 · macOS 13 or later · Mac App Store coming soon</p>
+        <p>Free · Version 1.2.1 · macOS 13 or later · Mac App Store coming soon</p>
       </div>
       <a class="download-button download-button-small" href="https://github.com/rblch/dackel-releases/releases/latest/download/Dackel.dmg" download>Download for Mac</a>
     </section>
