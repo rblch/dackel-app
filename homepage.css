@@ -128,3 +128,15 @@ footer a:hover { text-decoration: underline; }
   footer { flex-wrap: wrap; gap: 15px; }
   footer nav { gap: 19px; }
 }
+/* Homepage: the cream page colour stays in the hero band, and the chapters sit on white.
+   The band runs edge to edge behind the header and intro, then stops partway down the
+   main screenshot so the window straddles the two. */
+.home { background: #fff; }
+.home body { overflow-x: clip; }
+.home .site-header, .home .intro { background: #f8f6ed; box-shadow: 0 0 0 100vmax #f8f6ed; }
+.home .site-header { clip-path: inset(0 -100vmax); }
+.home .intro { margin-bottom: 0; padding-bottom: 37px; clip-path: inset(0 -100vmax); }
+.home .app-screenshot { position: relative; }
+.home .app-screenshot::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 58%; background: #f8f6ed; }
+.home .uses-nav a { background: #fff; }
+@media (max-width: 700px) { .home .intro { padding-bottom: 28px; } }
