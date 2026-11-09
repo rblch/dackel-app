@@ -170,3 +170,12 @@ footer a:hover { text-decoration: underline; }
 @media (max-width: 860px) { .chapter-points.tiles.even { grid-template-columns: 1fr; } }
 /* A window screenshot already carries its own shadow, so it needs no card. */
 .point .tile-window { width: 100%; height: auto; margin: 0; }
+
+/* Work closes the chapters on a dark band and shows Dackel in dark mode. */
+.home .chapter.dark { position: relative; padding-bottom: 104px; border-top: 0; color: #f3f1e8; }
+.home .chapter.dark::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); background: #1e1e1b; }
+.chapter.dark .chapter-eyebrow { color: #e39a72; }
+.chapter.dark .chapter-lede { color: #b8b7ac; }
+.chapter.dark kbd { border-color: #4a4a44; background: #2c2c28; color: #f3f1e8; }
+.chapter.dark + .underneath { border-top: 0; }
+@media (max-width: 860px) { .home .chapter.dark { padding-bottom: 64px; } }
