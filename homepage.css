@@ -154,3 +154,6 @@ footer a:hover { text-decoration: underline; }
 .uses-line a:hover, .uses-line a:focus-visible { color: #8c4225; background-size: 100% 1px; }
 @media (max-width: 700px) { .uses-line p { font-size: 17px; margin-top: 22px; } .header-soon { display: none; } }
 @media (max-width: 700px) { .home .intro { padding-bottom: 28px; } }
+/* Links in "Dackel for …" glide to their chapter instead of jumping; Reduce Motion keeps the jump. */
+@media (prefers-reduced-motion: no-preference) { .home { scroll-behavior: smooth; } }
+.home .chapter { scroll-margin-top: -40px; }
