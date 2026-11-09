@@ -57,8 +57,6 @@ h1 > span { display: block; color: #777969; }
 .point h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; font-weight: 600; letter-spacing: -.5px; }
 .point p { margin: 0; font-size: 15px; line-height: 1.75; color: #5c5e52; }
 .point img { display: block; width: 100%; height: auto; margin-top: 18px; }
-/* A small panel crop keeps its real size (2× capture) on a soft card. */
-.point img.panel { width: 244px; max-width: 100%; border-radius: 12px; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 12px 32px rgba(48, 49, 44, .14); }
 /* Content crops without a window frame sit on a white card with a window-like shadow. */
 .point img.card { padding: 18px 10px 10px 4px; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 12px 32px rgba(48, 49, 44, .14); }
 :is(.chapter, .underneath, .point) code { font-family: ui-monospace, Menlo, monospace; font-size: .86em; padding: 1px 5px; border-radius: 5px; background: #efecdf; }
@@ -157,3 +155,11 @@ footer a:hover { text-decoration: underline; }
 /* Links in "Dackel for …" glide to their chapter instead of jumping; Reduce Motion keeps the jump. */
 @media (prefers-reduced-motion: no-preference) { .home { scroll-behavior: smooth; } }
 .home .chapter { scroll-margin-top: -40px; }
+/* Tiles: each point sits on a soft panel with its picture centred below the title, so crops of
+   different shapes still line up. Captures are 2× and shown at their real size. */
+.chapter-points.tiles { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 24px; }
+.point.tile { display: flex; flex-direction: column; padding: 32px 32px 36px; border-top: 0; border-radius: 22px; background: #f6f5f0; }
+.tile-art { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 300px; padding-top: 24px; }
+.point .tile-card { width: 100%; max-width: var(--real-width, 100%); height: auto; margin: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 10px 28px rgba(48, 49, 44, .12); }
+@media (max-width: 860px) { .chapter-points.tiles { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .chapter-points.tiles { gap: 16px; } .point.tile { padding: 24px 20px 28px; } .tile-art { min-height: 0; } }
