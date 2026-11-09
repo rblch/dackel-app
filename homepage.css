@@ -141,7 +141,16 @@ footer a:hover { text-decoration: underline; }
 .home .app-screenshot { position: relative; }
 .home .app-screenshot::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 100%; background: linear-gradient(#f8f6ed 25%, #fff 90%); }
 .home .uses-nav a { background: #fff; }
-/* With the hero screenshot hidden, the cream fades out behind the chapter links instead. */
-.home .uses-nav { position: relative; padding-top: 24px; }
-.home .uses-nav::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 160px; background: linear-gradient(#f8f6ed, #fff); }
+/* With the hero screenshot hidden, the cream fades out at the top of the first chapter. */
+.home .intro + .chapter { position: relative; }
+.home .intro + .chapter::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 160px; background: linear-gradient(#f8f6ed, #fff); }
+/* One compact download button sits in the header, opposite the wordmark. */
+.header-get { position: relative; z-index: 3; display: flex; align-items: center; gap: 16px; }
+.header-soon { font-size: 12px; color: #8a8b7f; }
+.download-button.header-download { width: auto; height: 36px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
+/* "Dackel for …" reads as a line of text under the headline, each field a link to its chapter. */
+.uses-line p { margin: 30px 0 0; max-width: 640px; font-size: 20px; line-height: 1.6; color: #77796d; }
+.uses-line a { color: #30312c; text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .2s ease, color .15s ease; }
+.uses-line a:hover, .uses-line a:focus-visible { color: #8c4225; background-size: 100% 1px; }
+@media (max-width: 700px) { .uses-line p { font-size: 17px; margin-top: 22px; } .header-soon { display: none; } }
 @media (max-width: 700px) { .home .intro { padding-bottom: 28px; } }
