@@ -179,3 +179,7 @@ footer a:hover { text-decoration: underline; }
 .chapter.dark kbd { border-color: #4a4a44; background: #2c2c28; color: #f3f1e8; }
 .chapter.dark + .underneath { border-top: 0; }
 @media (max-width: 860px) { .home .chapter.dark { padding-bottom: 64px; } }
+
+/* Two-line headlines split evenly instead of leaving one word on the second line. */
+.chapter h2, .underneath h2 { text-wrap: balance; }
+.chapter-lede { text-wrap: pretty; }
