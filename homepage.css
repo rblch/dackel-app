@@ -43,7 +43,7 @@ h1 > span { display: block; color: #777969; }
 .uses-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 14px; margin: 48px 0 0; }
 .uses-nav p { margin: 0; font-size: 17px; color: #77796d; }
 .uses-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.uses-nav a { display: inline-block; padding: 8px 16px; border: 1px solid #deddd2; border-radius: 999px; background: #fff; color: #30312c; font-size: 15px; font-weight: 500; text-decoration: none; box-shadow: 0 1px 2px rgba(48, 49, 44, .06); transition: border-color .15s ease, color .15s ease; }
+.uses-nav a { display: inline-block; padding: 8px 16px; border: 1px solid #deddd2; border-radius: 999px; background: transparent; color: #30312c; font-size: 15px; font-weight: 500; text-decoration: none; transition: border-color .15s ease, color .15s ease; }
 .uses-nav a:hover, .uses-nav a:focus-visible { border-color: #8c4225; color: #8c4225; }
 .chapter { padding: 96px 0 24px; scroll-margin-top: 16px; }
 .chapter + .chapter { border-top: 1px solid #deddd2; }
