@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A native Markdown editor for journaling, meeting notes, research and linked notes. Plain Markdown files, daily notes, math and Quick Capture. Free, with no accounts or tracking. Download for macOS 13 or later.">
+  <meta name="description" content="A native Markdown editor for writing, journalism, study, research, engineering and work. Plain Markdown files, math, diagrams and Quick Capture. Free, with no accounts or tracking.">
   <meta name="theme-color" content="#f8f6ed">
   <title>Dackel — Markdown for Mac</title>
   <link rel="icon" href="favicon.ico?v=8d63aca" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="assets/dackel-favicon-32-820987a9.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/dackel-favicon-64-45338dbb.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/dackel-apple-touch-icon-c06fd930.png" sizes="180x180">
-  <link rel="stylesheet" href="homepage.css?v=10760e0d">
+  <link rel="stylesheet" href="homepage.css?v=6cf6d083">
   <script src="mascot.js?v=3f0482c3" defer></script>
 </head>
 <body>
@@ -56,42 +56,135 @@
     <nav class="uses-nav" aria-label="Ways to use Dackel">
       <p>Dackel for</p>
       <ul>
-        <li><a href="#journal">Journaling</a></li>
-        <li><a href="#meetings">Meetings</a></li>
-        <li><a href="#research">Research &amp; math</a></li>
-        <li><a href="#linked-notes">Linked notes</a></li>
+        <li><a href="#writing">writing</a></li>
+        <li><a href="#journalism">journalism</a></li>
+        <li><a href="#study">study</a></li>
+        <li><a href="#research">research</a></li>
+        <li><a href="#engineering">engineering</a></li>
+        <li><a href="#work">work</a></li>
       </ul>
     </nav>
 
-    <section class="chapter" id="journal" aria-labelledby="journal-title">
+    <section class="chapter" id="writing" aria-labelledby="writing-title">
       <header class="chapter-head">
-        <p class="chapter-eyebrow">Journaling</p>
-        <h2 id="journal-title">A page for every day.</h2>
-        <p class="chapter-lede">One note per day, started from your own template, kept as plain files on your Mac. Nobody else reads your journal, including us.</p>
+        <p class="chapter-eyebrow">Writing</p>
+        <h2 id="writing-title">Just you and the page.</h2>
+        <p class="chapter-lede">Focus mode hides everything but your words. Your draft stays a plain text file you can open anywhere.</p>
       </header>
       <figure class="chapter-visual">
         <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
-          <p><strong>Screenshot to stage</strong>Today's note, 8 November, opened from a Daily template: a mood property, “Three good things”, and a few timed entries added through the day.</p>
+          <p><strong>Screenshot to stage</strong>A short-story manuscript in Focus mode: no sidebar, no panels, a few paragraphs of prose with a chapter heading.</p>
         </div>
       </figure>
       <div class="chapter-points">
         <article class="point">
-          <h3>Today's note, one click away</h3>
-          <p>Open Today's Note and Dackel makes the page for you, named by the date and filled from your daily template, with <code>{{date}}</code> and your prompts already in place.</p>
+          <h3>Know where you stand</h3>
+          <p>Word count and reading time as you write, and for any passage you select.</p>
         </article>
         <article class="point">
-          <h3>Write it down the moment it happens</h3>
-          <p>Press <kbd>⌃⌥⌘N</kbd> in any app and your thought lands in today's note, with the time if you like, without leaving what you're doing.</p>
-          <img src="assets/dackel-quick-capture-59c11511.png" alt="The Quick Capture window, ready for a thought." width="1200" height="807" loading="lazy">
+          <h3>Every draft, kept</h3>
+          <p>Compare today's version with last week's, and bring back any sentence you cut.</p>
+          <img src="assets/dackel-version-history-7a44fdb6.png" alt="Version history comparing an earlier version with the current text, with named versions in the timeline." width="1200" height="948" loading="lazy">
         </article>
       </div>
     </section>
 
-    <section class="chapter" id="meetings" aria-labelledby="meetings-title">
+    <section class="chapter" id="journalism" aria-labelledby="journalism-title">
       <header class="chapter-head">
-        <p class="chapter-eyebrow">Meetings</p>
-        <h2 id="meetings-title">Walk out with the action items.</h2>
-        <p class="chapter-lede">Start every meeting on the same page and leave with a list of everything you promised to do.</p>
+        <p class="chapter-eyebrow">Journalism</p>
+        <h2 id="journalism-title">Get it down before it's gone.</h2>
+        <p class="chapter-lede">A quote, a lead, a phone number: press <kbd>⌃⌥⌘N</kbd> in any app and it's saved.</p>
+      </header>
+      <figure class="chapter-visual">
+        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
+          <p><strong>Screenshot to stage</strong>Quick Capture over a news article in Safari, with a quote and its link ready to save to the Inbox.</p>
+        </div>
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Sources, one share away</h3>
+          <p>Share a web page to Dackel and it arrives as a link, with the text you selected quoted above it.</p>
+        </article>
+        <article class="point">
+          <h3>A log for every day</h3>
+          <p>Send captures straight to today's note, each one stamped with the time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="study" aria-labelledby="study-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Study</p>
+        <h2 id="study-title">From lecture notes to finished paper.</h2>
+        <p class="chapter-lede">Write math the way you would in LaTeX and see it typeset as you go.</p>
+      </header>
+      <figure class="chapter-visual">
+        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
+          <p><strong>Screenshot to stage</strong>Lecture notes in Rendered mode: a displayed equation, inline math in the text and a worked example.</p>
+        </div>
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Ready for every lecture</h3>
+          <p>Start each class from your own template, with the course, the date and room for questions already in place.</p>
+        </article>
+        <article class="point">
+          <h3>Ready to hand in</h3>
+          <p>Export a PDF with typeset equations, footnotes and a bookmark for every heading.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="research" aria-labelledby="research-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Research</p>
+        <h2 id="research-title">See how your sources connect.</h2>
+        <p class="chapter-lede">Link papers, ideas and findings with <code>[[wikilinks]]</code>, and the graph shows where they lead.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-graph-1f44297a.png" alt="A graph of a folder of notes, with one note in the middle linked to six others." width="1200" height="991" loading="lazy">
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Find the paper you need</h3>
+          <p>Search by what you've noted about it, like <code>status=read</code> or a tag, together with the words inside it.</p>
+        </article>
+        <article class="point">
+          <h3>Keep the PDF with the note</h3>
+          <p>Drop a PDF onto a note. Dackel copies it next to the note and adds a link to it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="engineering" aria-labelledby="engineering-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Engineering</p>
+        <h2 id="engineering-title">Docs that draw their own diagrams.</h2>
+        <p class="chapter-lede">Describe a flow in a few lines of Mermaid and Dackel draws it. The diagram lives in the same text file as your docs.</p>
+      </header>
+      <figure class="chapter-visual">
+        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
+          <p><strong>Screenshot to stage</strong>A design doc in Rendered mode with a Mermaid sequence diagram, a short code block and a table of endpoints.</p>
+        </div>
+      </figure>
+      <div class="chapter-points">
+        <article class="point">
+          <h3>Tables without the pipes</h3>
+          <p>Click into a cell and type, or add rows and columns with a click. Underneath, it's still a Markdown table.</p>
+          <img src="assets/dackel-tables-a0b909d5.png" class="card" alt="A table with a cell being edited and buttons to add a row or column." width="1260" height="718" loading="lazy">
+        </article>
+        <article class="point">
+          <h3>Markdown when you want it</h3>
+          <p>Switch to Source to see every character exactly as it's saved.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="work" aria-labelledby="work-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Work</p>
+        <h2 id="work-title">Walk out with the action items.</h2>
+        <p class="chapter-lede">Start every meeting the same way, and leave with a list of everything you agreed to do.</p>
       </header>
       <figure class="chapter-visual">
         <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
@@ -100,57 +193,12 @@
       </figure>
       <div class="chapter-points">
         <article class="point">
-          <h3>Every meeting starts the same way</h3>
-          <p>Name new notes automatically, like <code>Meeting 2026-11-08 1000</code>, and start them from a template with attendees, agenda and next steps.</p>
+          <h3>Notes that name themselves</h3>
+          <p>“Meeting 2026-11-09 1000”, with attendees, agenda and next steps ready to fill in.</p>
         </article>
         <article class="point">
           <h3>Every open task, in one list</h3>
-          <p>Press <kbd>⌃⌘T</kbd> to see the unchecked tasks from all your notes, grouped by meeting. Check one off there, or jump straight to where it was written.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="chapter" id="research" aria-labelledby="research-title">
-      <header class="chapter-head">
-        <p class="chapter-eyebrow">Research, science &amp; math</p>
-        <h2 id="research-title">From first idea to finished paper.</h2>
-        <p class="chapter-lede">Write <code>$E = mc^2$</code> and see it typeset. Draw a diagram from a few lines of text. It all stays plain Markdown you can open anywhere.</p>
-      </header>
-      <figure class="chapter-visual">
-        <div class="shot-todo" style="aspect-ratio: 2000 / 1400">
-          <p><strong>Screenshot to stage</strong>A lab-notes or thesis chapter in Rendered mode: a displayed equation, inline math in a paragraph, a Mermaid flowchart of the method and a footnote.</p>
-        </div>
-      </figure>
-      <div class="chapter-points">
-        <article class="point">
-          <h3>Ready to hand in</h3>
-          <p>Export a PDF with selectable text, typeset math and diagrams, working footnote links and bookmarks for every heading.</p>
-        </article>
-        <article class="point">
-          <h3>Name the drafts that matter</h3>
-          <p>Mark a version “Sent to advisor” and it's kept for good. Later, see exactly what changed since then, and undo any single change.</p>
-          <img src="assets/dackel-version-history-7a44fdb6.png" alt="Version history comparing an earlier version with the current text, with named versions in the timeline." width="1200" height="948" loading="lazy">
-        </article>
-      </div>
-    </section>
-
-    <section class="chapter" id="linked-notes" aria-labelledby="linked-title">
-      <header class="chapter-head">
-        <p class="chapter-eyebrow">Linked notes</p>
-        <h2 id="linked-title">Notes that know each other.</h2>
-        <p class="chapter-lede">Link one idea to the next with <code>[[wikilinks]]</code>, then see where everything leads. Open the folder of notes you already have and start right away.</p>
-      </header>
-      <figure class="chapter-visual">
-        <img src="assets/dackel-graph-1f44297a.png" alt="A graph of the Field Notes folder with Weekend walk in the middle, linked to six other notes." width="1200" height="991" loading="lazy">
-      </figure>
-      <div class="chapter-points">
-        <article class="point">
-          <h3>See what links here</h3>
-          <p>The Links panel shows every note that mentions this one, with the sentence around each mention.</p>
-        </article>
-        <article class="point">
-          <h3>Rename without breaking anything</h3>
-          <p>Rename or move a note and every link to it is updated, in every note in the folder.</p>
+          <p>Press <kbd>⌃⌘T</kbd> to see unchecked tasks from all your notes, grouped by meeting. Tick them off right there.</p>
         </article>
       </div>
     </section>
@@ -158,15 +206,15 @@
     <section class="underneath" aria-labelledby="underneath-title">
       <h2 id="underneath-title">And everything underneath.</h2>
       <ul>
-        <li><h3>Command palette</h3><p>Find any command by typing, with its shortcut beside it.</p></li>
-        <li><h3>Type / to format</h3><p>Headings, lists, checklists and templates without the mouse.</p></li>
-        <li><h3>Tables you can click into</h3><p>Edit cells and add rows in place. Still plain Markdown.</p></li>
-        <li><h3>Two notes side by side</h3><p>Open a second note in a split pane to read one and write the other.</p></li>
-        <li><h3>Search that understands notes</h3><p>Filter by folder, tag or property, like <code>status=active</code>.</p></li>
-        <li><h3>Focus mode</h3><p>Hide the sidebar and panels, and keep only the page.</p></li>
-        <li><h3>Everything at a glance</h3><p>Word count, reading time, properties and tags beside your writing.</p></li>
-        <li><h3>Rendered, Hybrid or Source</h3><p>See formatted text, the Markdown, or both.</p></li>
-        <li><h3>Nothing lost</h3><p>Autosave, recovery after a crash, and Recently Deleted for notes you want back.</p></li>
+        <li><h3>Command palette</h3><p>Find any command by typing.</p></li>
+        <li><h3>Type / to format</h3><p>Headings, lists and templates without the mouse.</p></li>
+        <li><h3>Two notes side by side</h3><p>Read one, write the other.</p></li>
+        <li><h3>Search everything</h3><p>Every note, ranked as you type.</p></li>
+        <li><h3>Everything at a glance</h3><p>Properties, tags and statistics beside your writing.</p></li>
+        <li><h3>Rename without worry</h3><p>Every link updates with it.</p></li>
+        <li><h3>Daily notes</h3><p>One page per day, from your own template.</p></li>
+        <li><h3>Your folders, your files</h3><p>Open the notes you already have.</p></li>
+        <li><h3>Nothing lost</h3><p>Autosave, crash recovery and Recently Deleted.</p></li>
       </ul>
     </section>
 
