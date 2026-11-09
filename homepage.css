@@ -163,3 +163,5 @@ footer a:hover { text-decoration: underline; }
 .point .tile-card { width: 100%; max-width: var(--real-width, 100%); height: auto; margin: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 10px 28px rgba(48, 49, 44, .12); }
 @media (max-width: 860px) { .chapter-points.tiles { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .chapter-points.tiles { gap: 16px; } .point.tile { padding: 24px 20px 28px; } .tile-art { min-height: 0; } }
+/* A crop of a web page has no window frame: fade its bottom edge into the white page. */
+.chapter-visual img.page-fade { -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent); }
