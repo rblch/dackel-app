@@ -139,4 +139,7 @@ footer a:hover { text-decoration: underline; }
 .home .app-screenshot { position: relative; }
 .home .app-screenshot::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 100%; background: linear-gradient(#f8f6ed 25%, #fff 90%); }
 .home .uses-nav a { background: #fff; }
+/* With the hero screenshot hidden, the cream fades out behind the chapter links instead. */
+.home .uses-nav { position: relative; padding-top: 24px; }
+.home .uses-nav::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 160px; background: linear-gradient(#f8f6ed, #fff); }
 @media (max-width: 700px) { .home .intro { padding-bottom: 28px; } }
