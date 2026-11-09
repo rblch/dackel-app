@@ -78,7 +78,7 @@ kbd { font-family: inherit; font-size: 13px; padding: 1px 6px; border: 1px solid
 .closing .download-button-small { width: auto; height: 38px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
 footer { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-top: 1px solid #deddd2; padding: 22px 0 30px; font-size: 11px; color: #77796d; }
 footer p { margin: 0; }
-.origin svg { width: 12px; height: 18px; margin-right: 6px; vertical-align: baseline; }
+.origin svg { width: 12px; height: 16px; margin-right: 6px; vertical-align: baseline; }
 footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
 footer a { text-decoration: none; }
 footer a:hover { text-decoration: underline; }
@@ -183,3 +183,7 @@ footer a:hover { text-decoration: underline; }
 /* Two-line headlines split evenly instead of leaving one word on the second line. */
 .chapter h2, .underneath h2 { text-wrap: balance; }
 .chapter-lede { text-wrap: pretty; }
+
+/* The book pages in the Journalism shots come from Project Gutenberg. */
+footer .credit a { text-decoration: underline; text-decoration-color: #c9c8bd; text-underline-offset: 2px; }
+footer .credit a:hover { color: #30312c; }
