@@ -39,11 +39,12 @@ h1 > span { display: block; color: #777969; }
 .promises h2 { margin: 0 0 8px; font-size: 19px; font-weight: 600; letter-spacing: -.4px; }
 .promises p { margin: 0; font-size: 15px; line-height: 1.7; color: #5c5e52; }
 /* Use-case chapters: one large visual, then at most two supporting points. */
-.uses-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 16px; padding: 44px 0 8px; }
-.uses-nav p { margin: 0; font-size: 15px; color: #77796d; }
+/* "Dackel for …" is a centred row of pills under the headline, each a link to its chapter. */
+.uses-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 14px; margin: 48px 0 0; }
+.uses-nav p { margin: 0; font-size: 17px; color: #77796d; }
 .uses-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.uses-nav a { display: inline-block; padding: 7px 14px; border: 1px solid #deddd2; border-radius: 999px; background: rgba(255, 255, 255, .45); font-size: 14px; font-weight: 500; text-decoration: none; }
-.uses-nav a:hover { border-color: #8c4225; }
+.uses-nav a { display: inline-block; padding: 8px 16px; border: 1px solid #deddd2; border-radius: 999px; background: #fff; color: #30312c; font-size: 15px; font-weight: 500; text-decoration: none; box-shadow: 0 1px 2px rgba(48, 49, 44, .06); transition: border-color .15s ease, color .15s ease; }
+.uses-nav a:hover, .uses-nav a:focus-visible { border-color: #8c4225; color: #8c4225; }
 .chapter { padding: 96px 0 24px; scroll-margin-top: 16px; }
 .chapter + .chapter { border-top: 1px solid #deddd2; }
 .chapter-head { max-width: 680px; margin: 0 auto 44px; text-align: center; }
@@ -104,7 +105,7 @@ footer a:hover { text-decoration: underline; }
   .intro-caption { font-size: 16px; margin-top: 21px; }
   .get-app { margin-top: 26px; }
   .closing { padding: 29px 0 32px; }
-  .uses-nav { padding-top: 32px; }
+  .uses-nav { margin-top: 32px; }
   .chapter { padding: 64px 0 12px; }
   .chapter-head { margin-bottom: 28px; }
   .chapter h2 { letter-spacing: -1.4px; }
@@ -138,7 +139,6 @@ footer a:hover { text-decoration: underline; }
 .home .intro { margin-bottom: 0; padding-bottom: 37px; clip-path: inset(0 -100vmax); }
 .home .app-screenshot { position: relative; }
 .home .app-screenshot::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 100%; background: linear-gradient(#f8f6ed 25%, #fff 90%); }
-.home .uses-nav a { background: #fff; }
 /* With the hero screenshot hidden, the cream fades out at the top of the first chapter. */
 .home .intro + .chapter { position: relative; }
 .home .intro + .chapter::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 160px; background: linear-gradient(#f8f6ed, #fff); }
@@ -146,11 +146,7 @@ footer a:hover { text-decoration: underline; }
 .header-get { position: relative; z-index: 3; display: flex; align-items: center; gap: 16px; }
 .header-soon { font-size: 12px; color: #8a8b7f; }
 .download-button.header-download { width: auto; height: 36px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
-/* "Dackel for …" reads as a line of text under the headline, each field a link to its chapter. */
-.uses-line p { margin: 30px 0 0; max-width: 640px; font-size: 20px; line-height: 1.6; color: #77796d; }
-.uses-line a { color: #30312c; text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .2s ease, color .15s ease; }
-.uses-line a:hover, .uses-line a:focus-visible { color: #8c4225; background-size: 100% 1px; }
-@media (max-width: 700px) { .uses-line p { font-size: 17px; margin-top: 22px; } .header-soon { display: none; } }
+@media (max-width: 700px) { .header-soon { display: none; } }
 @media (max-width: 700px) { .home .intro { padding-bottom: 28px; } }
 /* Links in "Dackel for …" glide to their chapter instead of jumping; Reduce Motion keeps the jump. */
 @media (prefers-reduced-motion: no-preference) { .home { scroll-behavior: smooth; } }
