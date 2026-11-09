@@ -39,9 +39,9 @@ h1 > span { display: block; color: #777969; }
 .promises h2 { margin: 0 0 8px; font-size: 19px; font-weight: 600; letter-spacing: -.4px; }
 .promises p { margin: 0; font-size: 15px; line-height: 1.7; color: #5c5e52; }
 /* Use-case chapters: one large visual, then at most two supporting points. */
-.uses-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 44px 0 8px; }
+.uses-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 16px; padding: 44px 0 8px; }
 .uses-nav p { margin: 0; font-size: 15px; color: #77796d; }
-.uses-nav ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.uses-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .uses-nav a { display: inline-block; padding: 7px 14px; border: 1px solid #deddd2; border-radius: 999px; background: rgba(255, 255, 255, .45); font-size: 14px; font-weight: 500; text-decoration: none; }
 .uses-nav a:hover { border-color: #8c4225; }
 .chapter { padding: 96px 0 24px; scroll-margin-top: 16px; }
