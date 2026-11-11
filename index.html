@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A native Markdown editor for your everyday writing. Plain Markdown files, linked notes, and Quick Capture. Free, with no accounts or tracking. Download for macOS 13 or later.">
+  <meta name="description" content="A native Markdown editor for writing, journalism, study, research, engineering and work. Plain Markdown files, math, diagrams and Quick Capture. Free, with no accounts or tracking.">
   <meta name="theme-color" content="#f8f6ed">
   <title>Dackel — Markdown for Mac</title>
   <link rel="icon" href="favicon.ico?v=8d63aca" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="assets/dackel-favicon-32-820987a9.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/dackel-favicon-64-45338dbb.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/dackel-apple-touch-icon-c06fd930.png" sizes="180x180">
-  <link rel="stylesheet" href="homepage.css?v=586408a2">
+  <link rel="stylesheet" href="homepage.css?v=6c8189e8">
   <script src="mascot.js?v=3f0482c3" defer></script>
 </head>
 <body>
@@ -29,6 +29,9 @@
           </button>
         </div>
       </div>
+      <div class="header-get">
+        <a class="download-button header-download" href="https://github.com/rblch/dackel-releases/releases/latest/download/Dackel.dmg" download>Download</a>
+      </div>
       <canvas class="mascot-walkway" hidden aria-hidden="true"></canvas>
       <span class="sr-only mascot-status" role="status"></span>
     </header>
@@ -37,21 +40,152 @@
       <div>
         <h1 id="headline">Markdown.<span>Made for Mac<span class="headline-period">.</span></span></h1>
       </div>
-      <p class="intro-caption">A native Markdown editor for your everyday writing.</p>
-      <div class="get-app">
-        <div class="download">
-          <a class="download-button" href="https://github.com/rblch/dackel-releases/releases/latest/download/Dackel.dmg" download>Download for Mac</a>
-          <p class="download-note">Free · Version 1.1 · macOS 13 or later</p>
-        </div>
-        <div class="app-store-soon" role="note">
-          <p><strong>Mac App Store</strong><span>Coming soon</span></p>
-        </div>
-      </div>
+      <nav class="uses-nav" aria-label="Ways to use Dackel">
+        <p>Dackel for</p>
+        <ul>
+          <li><a href="#writing">writing</a></li>
+          <li><a href="#journalism">journalism</a></li>
+          <li><a href="#study">study</a></li>
+          <li><a href="#research">research</a></li>
+          <li><a href="#engineering">engineering</a></li>
+          <li><a href="#work">work</a></li>
+        </ul>
+      </nav>
     </section>
 
+    <!-- Hero screenshot hidden for now; restore by removing this comment wrapper.
     <figure class="app-screenshot">
       <img src="assets/dackel-main-5a6f9f51.png" alt="Dackel on macOS: a rendered note called Plan a weekend walk, with a checklist, links to other notes and a list of things to notice." width="2000" height="1594" fetchpriority="high">
     </figure>
+    -->
+
+
+    <section class="chapter" id="writing" aria-labelledby="writing-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Writing</p>
+        <h2 id="writing-title">Just you and your words.</h2>
+        <p class="chapter-lede">Focus mode keeps the line you're writing in the center and fades everything else away.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-writing-focus-f88831db.png" alt="Chapter I of Alice's Adventures in Wonderland in Focus mode: the heading and first paragraph faded, the paragraph being written at full strength with the cursor after “close by her”." width="2000" height="1310" loading="lazy">
+      </figure>
+      <div class="chapter-points tiles">
+        <article class="point tile">
+          <h3>Every word, counted.</h3>
+          <div class="tile-art"><img src="assets/dackel-writing-stats-b9d8fe29.png" class="tile-card" style="--real-width: 244px" alt="The Info panel for Chapter 1: 1,640 words, 8 minutes to read, with Author and Title properties." width="244" height="278" loading="lazy"></div>
+        </article>
+        <article class="point tile">
+          <h3>Every change, kept.</h3>
+          <div class="tile-art"><img src="assets/dackel-writing-change-5a0e07f9.png" class="tile-card" style="--real-width: 625px" alt="Version history marking one change: “But,” struck out and replaced by a new sentence, with a Revert Change button." width="625" height="223" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="journalism" aria-labelledby="journalism-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Journalism</p>
+        <h2 id="journalism-title">Get it down before it's gone.</h2>
+        <p class="chapter-lede">A quote, a lead, a phone number: press <kbd>⌃⌥⌘N</kbd>, or share a page from Safari and it's saved with its source.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img class="page-fade" src="assets/dackel-journalism-capture-e4ad2b00.png" alt="Quick Capture over Franklin's The Way to Wealth on Project Gutenberg: a link card for the page and the quoted line “Lost time is never found again”, which is highlighted in the text, ready to save as a new note in the Reporting folder." width="1808" height="1142" loading="lazy">
+      </figure>
+      <div class="chapter-points tiles even">
+        <article class="point tile"><h3>Sources, one share away.</h3>
+          <div class="tile-art"><img src="assets/dackel-journalism-share-2d779079.png" class="tile-card" style="--real-width: 525px" alt="Safari's share menu over Franklin's The Way to Wealth: the selected line “do not squander time, for that is the stuff life is made of” in the preview, with Dackel highlighted between Mail and Messages." width="1050" height="1124" loading="lazy"></div></article>
+        <article class="point tile"><h3>Your day, on the record.</h3>
+          <div class="tile-art"><img src="assets/dackel-journalism-log-12c39f4d.png" class="tile-window" alt="The daily note for Monday, 9 November: two tasks under Today, and a Log of five entries stamped from 08:55 to 11:52, ending with the night editor approving the Franklin opening." width="1504" height="1350" loading="lazy"></div></article>
+      </div>
+    </section>
+
+    <section class="chapter" id="study" aria-labelledby="study-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Study</p>
+        <h2 id="study-title">From lecture notes to finished paper.</h2>
+        <p class="chapter-lede">Write math the way you would in LaTeX, and watch it typeset as you go.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-study-math-b66b06df.png" alt="Lecture notes on Newton's law of cooling: the differential equation and its solution typeset as displayed equations, inline symbols such as T and k in the text, a worked coffee example that ends at about 14 minutes, and an “On the exam” tip." width="2000" height="1368" loading="lazy">
+      </figure>
+      <div class="chapter-points tiles even">
+        <article class="point tile">
+          <h3>Start each lecture from a template.</h3>
+          <div class="tile-art"><img src="assets/dackel-study-template-1c6376d3.png" class="tile-window" alt="New Note from Template with “lec” typed: the Lecture template is selected, and its preview shows a note named Lecture 2026-11-09 with the course Physics 101, today's date, the lecture tag and empty Notes and Questions sections." width="1400" height="740" loading="lazy"></div>
+        </article>
+        <article class="point tile">
+          <h3>Export to PDF and hand it in.</h3>
+          <div class="tile-art"><img src="assets/dackel-study-pdf-2e346667.png" class="tile-window" alt="The thesis chapter “3 How quickly does coffee cool?” exported as a PDF and open in Preview: the sidebar lists bookmarks for 3.1 Measurements, 3.2 Fitting k and 3.3 Sources of error, and the page shows the typeset cooling equation, a footnote link and a flowchart of the experiment." width="1894" height="1830" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="research" aria-labelledby="research-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Research</p>
+        <h2 id="research-title">See how your sources connect.</h2>
+        <p class="chapter-lede">Link papers, ideas and findings, and the graph shows where they lead.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-research-note-005f9072.png" alt="A reading note on Darwin's On the Origin of Species: a short summary of the argument with links to Struggle for existence, Deep time and Natural selection, and a Connections list linking to Malthus 1798, Lyell 1830, Wallace 1858, Inheritance and Mendel 1866." width="2000" height="1368" loading="lazy">
+      </figure>
+      <div class="chapter-points tiles even">
+        <article class="point tile">
+          <h3>Every source on one map.</h3>
+          <div class="tile-art"><img src="assets/dackel-research-graph-3d7790f7.png" class="tile-window" alt="The vault graph with Darwin 1859 highlighted in the middle and linked to Malthus 1798, Lyell 1830, Wallace 1858, Mendel 1866 and the ideas Struggle for existence, Natural selection, Deep time and Inheritance. Lamarck 1809, which Darwin's note doesn't link, sits greyed at the edge." width="1504" height="1558" loading="lazy"></div>
+        </article>
+        <article class="point tile">
+          <h3>Find the paper you need.</h3>
+          <div class="tile-art"><img src="assets/dackel-research-search-2076c32e.png" class="tile-window" alt="Search with “darw” typed: Darwin 1859 first under Filenames, then notes that mention Darwin under Content, such as Wallace 1858 with four matches and Inheritance with the line “How do traits pass on? Darwin never found out.”" width="1138" height="956" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="engineering" aria-labelledby="engineering-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Engineering</p>
+        <h2 id="engineering-title">Docs with diagrams built in.</h2>
+        <p class="chapter-lede">Mermaid flows integrated in your notes.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-engineering-diagram-8bc5967b.png" alt="A design doc called Webhook delivery: a short introduction linking to the decision record 0007 Retry with backoff, a sequence diagram drawn from Mermaid in which the webhook service gets a 503 from the customer endpoint, waits 30 seconds and retries to a 200 OK, and the start of a Retry schedule table. The sidebar lists the team's Decisions, Design, Reference and Runbooks folders." width="2000" height="1384" loading="lazy">
+      </figure>
+      <div class="chapter-points tiles even">
+        <article class="point tile">
+          <h3>Edit tables like a spreadsheet.</h3>
+          <div class="tile-art"><img src="assets/dackel-engineering-table-e63a8496.png" class="tile-card" style="--real-width: 484px" alt="The Retry schedule table as an editable grid: the cell “10 min” is selected for editing, with a plus button beside the grid to add a column and one below it to add a row." width="968" height="548" loading="lazy"></div>
+        </article>
+        <article class="point tile">
+          <h3>See your code highlighted.</h3>
+          <div class="tile-art"><img src="assets/dackel-engineering-code-985bcc30.png" class="tile-card" style="--real-width: 450px" alt="The Payload section of the design doc: a JSON code block for an order.paid event, with keys and strings in red and the amount 4200 in blue." width="900" height="668" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter dark" id="work" aria-labelledby="work-title">
+      <header class="chapter-head">
+        <p class="chapter-eyebrow">Work</p>
+        <h2 id="work-title">Walk out with the action items.</h2>
+        <p class="chapter-lede">Press <kbd>⌃⌘T</kbd> and every open task from every meeting is in one list.</p>
+      </header>
+      <figure class="chapter-visual">
+        <img src="assets/dackel-work-tasks-289ebf5d.png" alt="Dackel in dark mode showing the Tasks view: six open tasks gathered from two weekly meeting notes, grouped under each meeting's Next steps, such as sending the final website copy to Jonas and drafting the launch newsletter." width="2000" height="1321" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="underneath" aria-labelledby="underneath-title">
+      <h2 id="underneath-title">And everything underneath.</h2>
+      <ul>
+        <li><h3>Command palette</h3><p>Find any command by typing.</p></li>
+        <li><h3>Type / to format</h3><p>Headings, lists and templates without the mouse.</p></li>
+        <li><h3>Two notes side by side</h3><p>Read one, write the other.</p></li>
+        <li><h3>Search everything</h3><p>Every note, ranked as you type.</p></li>
+        <li><h3>Everything at a glance</h3><p>Properties, tags and statistics beside your writing.</p></li>
+        <li><h3>Rename without worry</h3><p>Every link updates with it.</p></li>
+        <li><h3>Daily notes</h3><p>One page per day, from your own template.</p></li>
+        <li><h3>Your folders, your files</h3><p>Open the notes you already have.</p></li>
+        <li><h3>Nothing lost</h3><p>Autosave, crash recovery and Recently Deleted.</p></li>
+      </ul>
+    </section>
 
     <section class="promises" aria-label="Free and private">
       <div>
@@ -66,75 +200,16 @@
       </div>
     </section>
 
-    <section class="features" aria-label="Features">
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Quick Capture from any app</h2>
-          <p>Press <kbd>⌃⌥⌘N</kbd> wherever you are and jot a thought into a new note or today's daily note, without leaving what you're doing.</p>
-        </div>
-        <img src="assets/dackel-quick-capture-59c11511.png" alt="The Quick Capture window, ready for a thought, saving to a new note in Field Notes." width="1200" height="807" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Type / for quick formatting</h2>
-          <p>Type <kbd>/</kbd> at the start of a line to add a heading, a list or a checklist without reaching for the mouse.</p>
-        </div>
-        <img src="assets/dackel-quick-actions-70ed346d.png" class="narrow" alt="A new note called Thoughts with the slash menu open, offering headings, bullet, numbered and task lists." width="1000" height="1000" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>The easiest way to edit tables</h2>
-          <p>Click into a cell and type. Add rows and columns with a click, and the table stays plain Markdown underneath.</p>
-        </div>
-        <img src="assets/dackel-tables-a0b909d5.png" class="card" alt="A Trail times note with a table of four stops, distances, times and notes, with a cell being edited and buttons to add a row or column." width="1260" height="718" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>See what links here</h2>
-          <p>See which notes link to the one you're reading, and where it links to.</p>
-        </div>
-        <img src="assets/dackel-links-67b0b61f.png" alt="The Packing list note with the Links panel showing two linked references and one outgoing link." width="1200" height="940" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>See how your notes connect</h2>
-          <p>A graph of your folder shows how your notes link to each other. Pick a note to open it.</p>
-        </div>
-        <img src="assets/dackel-graph-1f44297a.png" alt="A graph of the Field Notes folder with Weekend walk in the middle, linked to six other notes." width="1200" height="991" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Every version, kept</h2>
-          <p>Dackel saves earlier versions of your notes as you write. Go back to any of them, or undo a single change.</p>
-        </div>
-        <img src="assets/dackel-version-history-7a44fdb6.png" alt="Version history for Weekend walk, comparing a version from 20:53 with the current text, with named versions like First plan in the timeline." width="1200" height="948" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Everything about a note, at a glance</h2>
-          <p>Word count and reading time, properties and tags, and the note's version history, all in one panel beside your writing.</p>
-        </div>
-        <img src="assets/dackel-note-info-cc423863.png" alt="The Packing list note with the Info panel showing statistics, properties, tags and history." width="1200" height="877" loading="lazy">
-      </article>
-      <article class="feature">
-        <div class="feature-text">
-          <h2>Every command, a keystroke away</h2>
-          <p>Open the command palette and type to find any command, from New Note to Insert Table, with its shortcut beside it.</p>
-        </div>
-        <img src="assets/dackel-command-palette-985679cf.png" alt="The command palette open over a note, listing recent commands such as Quick Capture, Settings and Insert Table." width="1200" height="877" loading="lazy">
-      </article>
-    </section>
-
     <section class="closing" aria-label="Download Dackel">
       <div>
         <h2>Dackel for Mac</h2>
-        <p>Free · Version 1.1 · macOS 13 or later · Mac App Store coming soon</p>
+        <p>Free · macOS 13 or later · Mac App Store coming soon</p>
       </div>
       <a class="download-button download-button-small" href="https://github.com/rblch/dackel-releases/releases/latest/download/Dackel.dmg" download>Download for Mac</a>
     </section>
 
     <footer>
-      <p class="origin"><svg viewBox="0 0 24 32" fill="currentColor" aria-hidden="true" focusable="false"><!-- Same silhouette as CologneCathedralView in the macOS app. --><polygon points="1,32 1,24 2,24 2,17 3,17 3.5,12 4,13 6,1 8,13 8.5,12 9,17 10,17 10,22 12,18 14,22 14,17 15,17 15.5,12 16,13 18,1 20,13 20.5,12 21,17 22,17 22,24 23,24 23,32"/></svg>Made in Cologne</p>
+      <p class="origin"><svg viewBox="0 0 24 32" fill="currentColor" aria-hidden="true" focusable="false"><!-- Same silhouette as CologneCathedralView in the macOS app. --><polygon points="1,32 1,24 2,24 2,17 3,17 3.5,12 4,13 6,1 8,13 8.5,12 9,17 10,17 10,22 12,18 14,22 14,17 15,17 15.5,12 16,13 18,1 20,13 20.5,12 21,17 22,17 22,24 23,24 23,32"/></svg>Made in Cologne<span class="credit"> · Book pages from <a href="https://www.gutenberg.org/ebooks/43855">Project Gutenberg</a></span></p>
       <nav aria-label="Support and legal information">
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>

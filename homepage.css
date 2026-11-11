@@ -38,26 +38,48 @@ h1 > span { display: block; color: #777969; }
 .promise-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .promises h2 { margin: 0 0 8px; font-size: 19px; font-weight: 600; letter-spacing: -.4px; }
 .promises p { margin: 0; font-size: 15px; line-height: 1.7; color: #5c5e52; }
-.features { display: grid; gap: 48px; padding: 48px 0 40px; border-bottom: 1px solid #deddd2; }
-.feature { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); align-items: center; gap: 56px; margin: 0; }
-.feature:nth-child(even) { grid-template-columns: minmax(0, 8fr) minmax(0, 5fr); }
-.feature:nth-child(even) .feature-text { order: 2; }
-.feature h2 { margin: 0 0 12px; font-size: 26px; line-height: 1.2; font-weight: 600; letter-spacing: -.8px; }
-.feature p { margin: 0; font-size: 15px; line-height: 1.75; color: #5c5e52; }
-.feature kbd { font-family: inherit; font-size: 13px; padding: 1px 6px; border: 1px solid #deddd2; border-radius: 5px; background: #fffdf6; white-space: nowrap; }
-/* The captures carry their own window shadow on a transparent background. */
-.feature img { display: block; width: 100%; height: auto; }
-/* Small windows stay near their real size instead of filling the column. */
+/* Use-case chapters: one large visual, then at most two supporting points. */
+/* "Dackel for …" is a centred row of pills under the headline, each a link to its chapter. */
+.uses-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 14px; margin: 48px 0 0; }
+.uses-nav p { margin: 0; font-size: 17px; color: #77796d; }
+.uses-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.uses-nav a { display: inline-block; padding: 8px 16px; border: 1px solid #deddd2; border-radius: 999px; background: transparent; color: #30312c; font-size: 15px; font-weight: 500; text-decoration: none; transition: border-color .15s ease, color .15s ease; }
+.uses-nav a:hover, .uses-nav a:focus-visible { border-color: #8c4225; color: #8c4225; }
+.chapter { padding: 96px 0 24px; scroll-margin-top: 16px; }
+.chapter + .chapter { border-top: 1px solid #deddd2; }
+.chapter-head { max-width: 680px; margin: 0 auto 44px; text-align: center; }
+.chapter-eyebrow { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #8c4225; }
+.chapter h2 { margin: 0 0 18px; font-size: clamp(36px, 5vw, 56px); line-height: 1.08; font-weight: 600; letter-spacing: -2px; }
+.chapter-lede { margin: 0; font-size: 18px; line-height: 1.65; color: #5c5e52; }
+.chapter-visual { margin: 0 -5.5%; }
+.chapter-visual img { display: block; width: 100%; height: auto; }
+.chapter-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; padding: 40px 0 0; }
+.point { padding-top: 22px; border-top: 1px solid #deddd2; }
+.point h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; font-weight: 600; letter-spacing: -.5px; }
+.point p { margin: 0; font-size: 15px; line-height: 1.75; color: #5c5e52; }
+.point img { display: block; width: 100%; height: auto; margin-top: 18px; }
 /* Content crops without a window frame sit on a white card with a window-like shadow. */
-.feature img.card { padding: 18px 10px 10px 4px; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 12px 32px rgba(48, 49, 44, .14); }
-.feature img.narrow { max-width: 440px; justify-self: center; }
+.point img.card { padding: 18px 10px 10px 4px; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 12px 32px rgba(48, 49, 44, .14); }
+:is(.chapter, .underneath, .point) code { font-family: ui-monospace, Menlo, monospace; font-size: .86em; padding: 1px 5px; border-radius: 5px; background: #efecdf; }
+kbd { font-family: inherit; font-size: 13px; padding: 1px 6px; border: 1px solid #deddd2; border-radius: 5px; background: #fffdf6; white-space: nowrap; }
+/* Draft-only frame for screenshots that still need staging in the app. */
+.shot-todo { display: grid; place-items: center; width: 89.5%; margin: 0 auto; padding: 32px; border: 2px dashed #cfcab4; border-radius: 14px; background: repeating-linear-gradient(135deg, #f3f0e3 0 14px, #f8f6ed 14px 28px); }
+.shot-todo p { max-width: 460px; margin: 0; font-size: 15px; line-height: 1.6; text-align: center; color: #5c5e52; }
+.shot-todo strong { display: block; margin-bottom: 6px; font-size: 12px; letter-spacing: .8px; text-transform: uppercase; color: #9c7751; }
+.underneath { padding: 96px 0 56px; border-top: 1px solid #deddd2; }
+.underneath h2 { margin: 0 0 40px; font-size: clamp(30px, 4vw, 40px); font-weight: 600; letter-spacing: -1.4px; text-align: center; }
+.underneath ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 40px; margin: 0; padding: 0; list-style: none; }
+.underneath h3 { margin: 0 0 6px; font-size: 16px; font-weight: 600; letter-spacing: -.2px; }
+.underneath p { margin: 0; font-size: 14px; line-height: 1.65; color: #5c5e52; }
+.promises { border-top: 1px solid #deddd2; padding-bottom: 48px; }
+.promises > div { border-top: 0; padding-top: 0; }
 .closing { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px 38px; padding: 38px 0 42px; }
 .closing h2 { margin: 0 0 4px; font-size: 18px; font-weight: 600; letter-spacing: -.3px; }
 .closing p { margin: 0; font-size: 13px; line-height: 1.6; color: #77796d; }
 .closing .download-button-small { width: auto; height: 38px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
 footer { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-top: 1px solid #deddd2; padding: 22px 0 30px; font-size: 11px; color: #77796d; }
 footer p { margin: 0; }
-.origin svg { width: 12px; height: 18px; margin-right: 6px; vertical-align: baseline; }
+.origin svg { width: 12px; height: 16px; margin-right: 6px; vertical-align: baseline; }
 footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
 footer a { text-decoration: none; }
 footer a:hover { text-decoration: underline; }
@@ -83,12 +105,17 @@ footer a:hover { text-decoration: underline; }
   .intro-caption { font-size: 16px; margin-top: 21px; }
   .get-app { margin-top: 26px; }
   .closing { padding: 29px 0 32px; }
-  .features { gap: 36px; padding: 36px 0 28px; }
-  .feature { grid-template-columns: 1fr; gap: 20px; }
+  .uses-nav { margin-top: 32px; }
+  .chapter { padding: 64px 0 12px; }
+  .chapter-head { margin-bottom: 28px; }
+  .chapter h2 { letter-spacing: -1.4px; }
+  .chapter-lede { font-size: 16px; }
+  .chapter-points { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .shot-todo { width: 100%; padding: 20px; }
+  .shot-todo p { font-size: 13px; }
+  .underneath { padding: 64px 0 36px; }
+  .underneath ul { grid-template-columns: 1fr 1fr; gap: 24px; }
   .promises { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
-  .feature:nth-child(even) { grid-template-columns: 1fr; }
-  .feature:nth-child(even) .feature-text { order: 0; }
-  .feature h2 { font-size: 22px; }
 }
 @media (max-width: 520px) {
   h1 { font-size: clamp(34px, 9.3vw, 48px); letter-spacing: -2px; }
@@ -97,6 +124,60 @@ footer a:hover { text-decoration: underline; }
   .download-button, .app-store-soon { width: 100%; padding: 0 8px; font-size: 14px; }
   .app-store-soon p { font-size: 13px; }
   .download-note { font-size: 10.5px; white-space: nowrap; }
+  .underneath ul { grid-template-columns: 1fr; }
+  .chapter-visual { margin: 0 -2%; }
   footer { flex-wrap: wrap; gap: 15px; }
   footer nav { gap: 19px; }
 }
+/* Homepage: the cream page colour stays in the hero band, and the chapters sit on white.
+   The band runs edge to edge behind the header and intro, then fades to white behind the
+   main screenshot, so there is no hard edge between hero and chapters. */
+.home { background: #fff; }
+.home body { overflow-x: clip; }
+.home .site-header, .home .intro { background: #f8f6ed; box-shadow: 0 0 0 100vmax #f8f6ed; }
+.home .site-header { clip-path: inset(0 -100vmax); }
+.home .intro { margin-bottom: 0; padding-bottom: 37px; clip-path: inset(0 -100vmax); }
+.home .app-screenshot { position: relative; }
+.home .app-screenshot::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 100%; background: linear-gradient(#f8f6ed 25%, #fff 90%); }
+/* With the hero screenshot hidden, the cream fades out at the top of the first chapter. */
+.home .intro + .chapter { position: relative; }
+.home .intro + .chapter::before { content: ""; position: absolute; z-index: -1; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 160px; background: linear-gradient(#f8f6ed, #fff); }
+/* One compact download button sits in the header, opposite the wordmark. */
+.header-get { position: relative; z-index: 3; display: flex; align-items: center; gap: 16px; }
+.download-button.header-download { width: auto; height: 36px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
+@media (max-width: 700px) { .home .intro { padding-bottom: 28px; } }
+/* Links in "Dackel for …" glide to their chapter instead of jumping; Reduce Motion keeps the jump. */
+@media (prefers-reduced-motion: no-preference) { .home { scroll-behavior: smooth; } }
+.home .chapter { scroll-margin-top: -40px; }
+/* Tiles: each point sits on a soft panel with its picture centred below the title, so crops of
+   different shapes still line up. Captures are 2× and shown at their real size. */
+.chapter-points.tiles { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 24px; }
+.point.tile { display: flex; flex-direction: column; padding: 32px 32px 36px; border-top: 0; border-radius: 22px; background: #f6f5f0; }
+.tile-art { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 300px; padding-top: 24px; }
+.point .tile-card { width: 100%; max-width: var(--real-width, 100%); height: auto; margin: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(48, 49, 44, .06), 0 10px 28px rgba(48, 49, 44, .12); }
+@media (max-width: 860px) { .chapter-points.tiles { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .chapter-points.tiles { gap: 16px; } .point.tile { padding: 24px 20px 28px; } .tile-art { min-height: 0; } }
+/* A crop of a web page has no window frame: fade its bottom edge into the white page. */
+.chapter-visual img.page-fade { -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent); }
+.chapter-points.tiles.even { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tile-art .shot-todo { width: 100%; }
+@media (max-width: 860px) { .chapter-points.tiles.even { grid-template-columns: 1fr; } }
+/* A window screenshot already carries its own shadow, so it needs no card. */
+.point .tile-window { width: 100%; height: auto; margin: 0; }
+
+/* Work closes the chapters on a dark band and shows Dackel in dark mode. */
+.home .chapter.dark { position: relative; padding-bottom: 104px; border-top: 0; color: #f3f1e8; }
+.home .chapter.dark::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); background: #1e1e1b; }
+.chapter.dark .chapter-eyebrow { color: #e39a72; }
+.chapter.dark .chapter-lede { color: #b8b7ac; }
+.chapter.dark kbd { border-color: #4a4a44; background: #2c2c28; color: #f3f1e8; }
+.chapter.dark + .underneath { border-top: 0; }
+@media (max-width: 860px) { .home .chapter.dark { padding-bottom: 64px; } }
+
+/* Two-line headlines split evenly instead of leaving one word on the second line. */
+.chapter h2, .underneath h2 { text-wrap: balance; }
+.chapter-lede { text-wrap: pretty; }
+
+/* The book pages in the Journalism shots come from Project Gutenberg. */
+footer .credit a { text-decoration: underline; text-decoration-color: #c9c8bd; text-underline-offset: 2px; }
+footer .credit a:hover { color: #30312c; }
