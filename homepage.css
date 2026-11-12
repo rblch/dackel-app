@@ -76,6 +76,9 @@ kbd { font-family: inherit; font-size: 13px; padding: 1px 6px; border: 1px solid
 .closing { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px 38px; padding: 38px 0 42px; }
 .closing h2 { margin: 0 0 4px; font-size: 18px; font-weight: 600; letter-spacing: -.3px; }
 .closing p { margin: 0; font-size: 13px; line-height: 1.6; color: #77796d; }
+.closing-get { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 20px; }
+.direct-download { font-size: 13px; color: #5c5e52; text-decoration: none; }
+.direct-download:hover { color: #8c4225; text-decoration: underline; }
 .closing .download-button-small { width: auto; height: 38px; padding: 0 18px; border-radius: 10px; font-size: 14px; }
 footer { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-top: 1px solid #deddd2; padding: 22px 0 30px; font-size: 11px; color: #77796d; }
 footer p { margin: 0; }
