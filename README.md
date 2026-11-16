@@ -27,6 +27,9 @@ Click the Dackel, or use Enter/Space, for a short walk; Escape cancels it. Reduc
 Motion uses a static bone instead. Core content remains available without
 JavaScript. There are no analytics or external font dependencies.
 
+When a screenshot changes, re-export its AVIF and WebP copies too; browsers load
+those before the PNG.
+
 ## Privacy notice
 
 The privacy notice covers the Dackel macOS app and this website, including local
@@ -40,6 +43,7 @@ can fetch these pages to read the directives. Other crawlers, including AI
 crawlers, are asked not to fetch these paths by the root `robots.txt` file.
 Google-Extended and Applebot-Extended also have explicit exclusions.
 The homepage remains indexable and the footer links remain available to visitors.
+`sitemap.xml` lists only the homepage; never add the three noindex pages to it.
 
 These are voluntary crawler directives, not access control. They cannot force
 removal of existing copies or prevent crawlers that ignore them from collecting

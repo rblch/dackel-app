@@ -32,6 +32,8 @@ h1 > span { display: block; color: #777969; }
 /* The capture includes the window's shadow; pull it outward so the window itself lines up with the page column. */
 .app-screenshot { margin: 0 -5.5%; }
 .app-screenshot img { display: block; width: 100%; height: auto; }
+/* <picture> only picks AVIF or WebP; it must not add a box, so the image rules above still size the img. */
+picture { display: contents; }
 .promises { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; padding: 48px 0 12px; }
 .promises > div { padding-top: 22px; border-top: 1px solid #deddd2; }
 .promise-icon { display: block; width: 22px; height: 22px; margin-bottom: 12px; color: #8c4225; }

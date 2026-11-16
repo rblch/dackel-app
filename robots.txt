@@ -18,3 +18,5 @@ User-agent: *
 Disallow: /impressum
 Disallow: /support
 Disallow: /privacy
+
+Sitemap: https://dackelapp.com/sitemap.xml
